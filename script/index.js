@@ -1,0 +1,3 @@
+openMenuPage(){
+    window.lo
+}
