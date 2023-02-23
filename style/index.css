@@ -1,0 +1,32 @@
+/* body{
+    margin: 0%;
+    padding: 0%;
+    background-color: blue;
+}
+nav{
+    display: flex;
+    height: 100px;
+    justify-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+}
+nav>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav>#rightNav>img{
+    height: 25%;
+}
+nav>#leftNav>img{
+    height: 100%;
+}
+nav>#leftNav>p{
+    margin: 0px 25px;
+}
+nav>#rightNav>p{
+    margin: 0px 25px;
+} */
