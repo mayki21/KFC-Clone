@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    top: 0;
+    position: sticky;
+    background-color: white;
+    z-index: 1;
+}
+nav{
+    display: flex;
+    height: 100px;
+    padding: 0px 75px;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+#leftNav{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+    
+}
+#leftNav>img{
+    height: 50%;
+}
+nav>#leftNav>h3:hover{
+    cursor: pointer;
+}
+#rightNav{
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: space-between;
+}
+#rightNav>img{
+    height: 50%;
+}
+nav>#rightNav>h3:hover{
+    cursor: pointer;
+}
+#welcome{
+    background-color: #f8f7f5;
+    padding: 0px 200px;
+    height: 7em;
+}
+#welcome>img{
+    width: 40px;
+}
+#welcome>div{
+    display: flex;
+    align-items: center;
+    height: 70%;
+}
+#catText{
+    display: flex;
+    height: 150px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 150px 100px 80px 300px;
+}
+#categories{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 5px 100px 100px 300px;
+}
+.card{
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.card>img{
+    width: 100%;
+}
+.card>h2{
+    text-align: center;
+    height: 2em;
+    margin-top: 10px;
+}
+footer{
+    width: 100%;
+    height: 30rem;
+    background-color: #202124;
+}
