@@ -6,6 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="adminPage.css">
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        let obj = JSON.parse(localStorage.getItem("compData"));
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['beverages',     obj.beverage],
+          ['desserts',      obj.dessert],
+          ['burgers',  obj.burger],
+          ['biryani bucket', obj["biryani bucket"]],
+          ['box meals',    obj["box meals"]],
+          ['new launch',    obj["new launch"]],
+          ['chicken bucket',  obj["chicken bucket"]]
+        ]);
+
+        var options = {
+          title: 'My Daily Activities',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawVisualization);
+
+    function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+        ['Month', 'Last Profit', 'Sales',  'Average'],
+        ['October',  165,      938,         614.6],
+        ['November',  157,      1167,         623],
+        ['December',  139,      1110,          609.4],
+        ['January',  136,      691,           569.6]
+        ]);
+
+        var options = {
+        title : 'Profit graph',
+        vAxis: {title: 'Sales'},
+        hAxis: {title: 'duration'},
+        seriesType: 'bars',
+        series: {5: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+    }
+    </script>
+
+
 </head>
 
 <body>
@@ -82,6 +141,208 @@
                     <img src="PHT.jpg" alt="">
                 </div>
             </div>
+
+            <!-- cards -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">2500</div>
+                        <div class="cardName">Daily Views</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Sales</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">284</div>
+                        <div class="cardName">Comments</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">$56,700</div>
+                        <div class="cardName">Earning</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add charts -->
+            <div class="graphBox">
+                <div class="box">
+                    <div id="piechart_3d"></div>
+                </div>
+                <div class="box">
+                    <div id="chart_div" class="barGraph"></div>
+                </div>
+
+            </div>
+
+
+            <div class="details">
+                <!-- order details list -->
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Recent Orders</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Burger</td>
+                                <td>$25</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- New Customer -->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="./profile_pic_images/profile_pic (2).jpg" alt=""></div></td>
+                            <td><h4>Rahul Raman<br><span>Ranchi</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="./profile_pic_images/profile_pic (7).jpg" alt=""></div></td>
+                            <td><h4>Mayank<br><span>Ranchi</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="./profile_pic_images/profile_pic (4).jpg" alt=""></div></td>
+                            <td><h4>Devnandan<br><span>Ranchi</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="./profile_pic_images/profile_pic (8).jpg" alt=""></div></td>
+                            <td><h4>Nishant<br><span>Ranchi</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="./profile_pic_images/profile_pic (10).jpg" alt=""></div></td>
+                            <td><h4>Raj Arya<br><span>Ranchi</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="./profile_pic_images/profile_pic (6).jpg" alt=""></div></td>
+                            <td><h4>Muskan<br><span>Ranchi</span></h4></td>
+                        </tr>
+                        <tr>
+                            <td width="60px"><div class="imgBx"><img src="./profile_pic_images/profile_pic (9).jpg" alt=""></div></td>
+                            <td><h4>John Wick<br><span>Ranchi</span></h4></td>
+                        </tr>
+                    </table>
+
+                    <br>
+                    <br>
+
+                    <hr>
+
+                    <div class="add"><button class="addBtn">Add New Product</button></div>
+                </div>
+
+                
+
+            </div>
+
+            
+
         </div>
     </div>
 
@@ -90,6 +351,18 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
     <script>
+        //menu Toggle
+        let toggle = document.querySelector(".toggle");
+        let navigation = document.querySelector(".navigation");
+        let main= document.querySelector(".main");
+
+        toggle.onclick = function(){
+            navigation.classList.toggle("active")
+            main.classList.toggle("active")
+        }
+        
+
+
         // add hovered class in selected list item
         let list = document.querySelectorAll(".navigation li");
         function activeLink(){
