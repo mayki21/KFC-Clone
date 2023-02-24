@@ -10,20 +10,21 @@
 </head>
 
 <body>
-    <nav>
-        <div id="leftNav">
-            <img src="images\bfccc.jpg" alt="BFC" onclick="location.href='index.html';">
-            <h3 onclick="location.href='menu.html';" id="menuBtn">Menu</h3>
-            <h3 onclick="location.href='deals.html';" id="dealsBtn">Deals</h3>
-        </div>
-        <div id="rightNav">
-            <h3 onclick="location.href='login.html'" id="signInBtn">Sign In</h3>
-            <h3 style="color: gray; font-size: 30px;">|</h3>
-            <h3 id="totalAmount">₹0</h3>
-            <img src="images\cartBucket.jpg" alt="">
-        </div>
-    </nav>
-    <div id="header"></div>
+    <header>
+        <nav>
+            <div id="leftNav">
+                <img src="images\bfccc.jpg" alt="BFC" onclick="location.href='index.html';">
+                <h3 onclick="location.href='menu.html';" id="menuBtn">Menu</h3>
+                <h3 onclick="location.href='deals.html';" id="dealsBtn">Deals</h3>
+            </div>
+            <div id="rightNav">
+                <h3 onclick="location.href='login.html'" id="signInBtn">Sign In</h3>
+                <h3 style="color: gray; font-size: 30px;">|</h3>
+                <h3 id="totalAmount">₹0</h3>
+                <img src="images\cartBucket.jpg" alt="">
+            </div>
+        </nav>
+    </header>
     <div id="main_container">
         <div class="left-menu-section">
             <div class="menu-container">
@@ -44,44 +45,43 @@
                     <p><a href="#snacks">Snacks</a></p>
                     <p><a href="#beverages">Beverages</a></p>
                 </div>
-
-
-
             </div>
         </div>
-        <div class="right-menu-section">
-            <div id="main_search-bar">
-                <div><img src="https://online.kfc.co.in/static/media/searchIcon.0e00b33c.svg" alt=""></div>
-                <input type="text" id="main_searched_item" placeholder="Search our menu">
-            </div>
-            <hr>
-            <div id="chicken_bucket">
-                <h2><a name="chicken_bucket">CHICKEN BUCKET</a></h2>
-                <div id="Chick_bucket"></div>
-            </div>
-            <div id="biryani_bucket" class="image_size">
-                <h2><a name="biryani_bucket">BIRYANI BUCKET</a></h2>
-                <div id="Biryani_bucket"></div>
-            </div>
-            <div id="box_meals" class="image_size">
-                <h2><a name="box_meals">BOX MEALS</a></h2>
-                <div id="Box_Meal"></div>
-            </div>
-            <div id="burgers" class="image_size">
-                <h2><a name="burgers">BURGERS</a></h2>
-                <div id="Burger"></div>
-            </div>
-            <div id="stay_home_specials" class="image_size">
-                <h2><a name="stay_home_special">STAY HOME SPECIALS</a></h2>
-                <div id="Stay_home"></div>
-            </div>
-            <div id="snacks" class="image_size">
-                <h2><a name="snacks">SNACKS</a></h2>
-                <div id="Snack"></div>
-            </div>
-            <div id="beverages" class="image_size">
-                <h2><a name="beverages">BEVERAGES</a></h2>
-                <div id="Beverage"></div>
+        <div id="scroll">
+            <div class="right-menu-section">
+                <div id="main_search-bar">
+                    <div><img src="https://online.kfc.co.in/static/media/searchIcon.0e00b33c.svg" alt=""></div>
+                    <input type="text" id="main_searched_item" placeholder="Search our menu">
+                </div>
+                <hr>
+                <div id="chicken_bucket">
+                    <h2><a name="chicken_bucket">CHICKEN BUCKET</a></h2>
+                    <div id="Chick_bucket"></div>
+                </div>
+                <div id="biryani_bucket" class="image_size">
+                    <h2><a name="biryani_bucket">BIRYANI BUCKET</a></h2>
+                    <div id="Biryani_bucket"></div>
+                </div>
+                <div id="box_meals" class="image_size">
+                    <h2><a name="box_meals">BOX MEALS</a></h2>
+                    <div id="Box_Meal"></div>
+                </div>
+                <div id="burgers" class="image_size">
+                    <h2><a name="burgers">BURGERS</a></h2>
+                    <div id="Burger"></div>
+                </div>
+                <div id="stay_home_specials" class="image_size">
+                    <h2><a name="stay_home_special">STAY HOME SPECIALS</a></h2>
+                    <div id="Stay_home"></div>
+                </div>
+                <div id="snacks" class="image_size">
+                    <h2><a name="snacks">SNACKS</a></h2>
+                    <div id="Snack"></div>
+                </div>
+                <div id="beverages" class="image_size">
+                    <h2><a name="beverages">BEVERAGES</a></h2>
+                    <div id="Beverage"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -160,7 +160,7 @@
 </body>
 <script>
 
-    let API = " http://localhost:3000/recipes"
+    let API = "https://63f5416b2213ed989c526a03.mockapi.io/fooditems"
     async function FetchData() {
         try {
             let request = await fetch(API);
