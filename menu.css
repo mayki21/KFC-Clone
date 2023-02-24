@@ -1,138 +1,144 @@
-nav {
+header{
+    top: 0;
+    position: sticky;
+    background-color: white;
+    z-index: 1;
+}
+nav{
     display: flex;
     height: 100px;
     padding: 0px 75px;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
-
-#leftNav {
+#leftNav{
     display: flex;
     align-items: center;
     width: 20%;
     justify-content: space-between;
-
+    
 }
-
-#leftNav>img {
+#leftNav>img{
     height: 50%;
 }
-
-nav>#leftNav>h3:hover {
+nav>#leftNav>h3:hover{
     cursor: pointer;
 }
-
-#rightNav {
+#rightNav{
     display: flex;
     align-items: center;
     width: 15%;
     justify-content: space-between;
 }
-
-#rightNav>img {
+#rightNav>img{
     height: 50%;
 }
-
-nav>#rightNav>h3:hover {
+nav>#rightNav>h3:hover{
     cursor: pointer;
 }
-  body {
-      font-family: sans-serif;
-      margin: 0%;
-      padding: 0%;
-  }
+body {
+    font-family: sans-serif;
+    margin: 0%;
+    padding: 0%;
+}
 
-  #main_container {
-      width: 100vw;
-      display: flex;
-  }
+#main_container {
+    width: 90%;
+    display: flex;
+    margin: auto;
+    height: 100vh;
+}
 
-  .left-menu-section {
-      flex: 1;
-      margin-left: 100px;
-      position: fixed;
-      top: 100px;
-  }
+.left-menu-section {
+    flex: 1;
+    width: 100px;
+    top: 100px;
+}
 
-  .strips {
-      display: flex;
-  }
+.strips {
+    display: flex;
+}
 
-  .strip-lines {
-      width: 5px;
-      height: 25px;
-      background-color: red;
-      padding: 2px;
-      margin: 0px 10px 10px 0px;
-  }
+.strip-lines {
+    width: 5px;
+    height: 25px;
+    background-color: red;
+    padding: 2px;
+    margin: 0px 10px 10px 0px;
+}
 
-  .outer-ul {
-      color: gray;
-      line-height: 25px;
-      font-size: large;
-  }
+.outer-ul {
+    color: gray;
+    line-height: 25px;
+    font-size: large;
+}
 
-  .outer-ul a {
-      text-decoration: none;
-      color: gray;
-  }
+.outer-ul a {
+    text-decoration: none;
+    color: gray;
+}
 
-  .right-menu-section {
-      flex: 3;
-      width: 60%;
-      margin-right: 6.2%;
-      margin-left: 30%;
-      margin-top: 2%;
-  }
+.right-menu-section {
+    width: 100%;
+}
 
-  .right-menu-section hr {
-      width: 860px;
-      height: 1px;
-      background-color: black;
-      margin-left: 0px;
+.right-menu-section hr {
+    width: 860px;
+    height: 1px;
+    background-color: black;
+}
+#scroll{
+    width: 80%;
+    aspect-ratio: 100/1;
+    padding: 40px 40px;
+    margin: 20px auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+::-webkit-scrollbar{
+    width: 1px;
+}
+#main_search-bar {
+    width: 200px;
+    height: 30px;
+    margin-top: 80px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    border: 1px solid #cecece;
+}
 
-  }
+#main_search-bar div {
+    margin-top: 5px;
+}
 
-  #main_search-bar {
-      width: 200px;
-      height: 30px;
-      margin-top: 80px;
-      background-color: white;
-      border-radius: 30px;
-      display: flex;
-      align-items: center;
-      padding-left: 10px;
-      border: 1px solid #cecece;
-  }
-
-  #main_search-bar div {
-      margin-top: 5px;
-  }
-
-  #main_search-bar input {
-      flex: 0.9;
-      height: 28px;
-      border: none;
-      outline: none;
-      font-size: 12px;
-      font-weight: bold;
-  }
-        .right-menu-section button {
-            width: 60%;
-            margin-left: 17%;
-            color: white;
-            background-color: red;
-            padding: 10px;
-            border-radius: 20px;
-            cursor: pointer;
-            border: 1px solid red;
-        }
+#main_search-bar input {
+    flex: 0.9;
+    height: 28px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+.right-menu-section button {
+    width: 60%;
+    margin-left: 17%;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid red;
+}
     
-        .right-menu-section button:hover {
-            font-size: 20px;
-            border: 1px solid rgba(32, 33, 36, .6509803921568628);
-            background-color: rgba(32, 33, 36, .6509803921568628);
-        }
+.right-menu-section button:hover {
+    font-size: 20px;
+    border: 1px solid rgba(32, 33, 36, .6509803921568628);
+    background-color: rgba(32, 33, 36, .6509803921568628);
+}
 /* Bucket CSS Starts From Here */
 
  #Chick_bucket {

@@ -145,6 +145,48 @@ footer{
     align-items: flex-end;
     justify-content: center;
 }
-#Dfooter>p{
-    
+#offers{
+    background-color: #202124;
+    color: white;
+    text-align: center;
+    padding-top: 1%;
+}
+#Toffer{
+    display: flex;
+    margin: 2% auto;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+#Doffer{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+}
+.offerCard{
+    background-color: white;
+    color: black;
+    height: 100%;
+    margin-bottom: 10%;
+}
+.offerCard>h1{
+    color: red;
+}
+.offerCard>img{
+    width: 100%;
+}
+.offerCard>p{
+    margin: 0px 10px;
+}
+.offerCard>button{
+    margin: 10% 10% 10% 50%;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid #202124;
+    height: 10%;
+    width: 30%;
+
 }
