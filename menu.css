@@ -1,0 +1,473 @@
+nav {
+    display: flex;
+    height: 100px;
+    padding: 0px 75px;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+#leftNav {
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+
+}
+
+#leftNav>img {
+    height: 50%;
+}
+
+nav>#leftNav>h3:hover {
+    cursor: pointer;
+}
+
+#rightNav {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: space-between;
+}
+
+#rightNav>img {
+    height: 50%;
+}
+
+nav>#rightNav>h3:hover {
+    cursor: pointer;
+}
+  body {
+      font-family: sans-serif;
+      margin: 0%;
+      padding: 0%;
+  }
+
+  #main_container {
+      width: 100vw;
+      display: flex;
+  }
+
+  .left-menu-section {
+      flex: 1;
+      margin-left: 100px;
+      position: fixed;
+      top: 100px;
+  }
+
+  .strips {
+      display: flex;
+  }
+
+  .strip-lines {
+      width: 5px;
+      height: 25px;
+      background-color: red;
+      padding: 2px;
+      margin: 0px 10px 10px 0px;
+  }
+
+  .outer-ul {
+      color: gray;
+      line-height: 25px;
+      font-size: large;
+  }
+
+  .outer-ul a {
+      text-decoration: none;
+      color: gray;
+  }
+
+  .right-menu-section {
+      flex: 3;
+      width: 60%;
+      margin-right: 6.2%;
+      margin-left: 30%;
+      margin-top: 2%;
+  }
+
+  .right-menu-section hr {
+      width: 860px;
+      height: 1px;
+      background-color: black;
+      margin-left: 0px;
+
+  }
+
+  #main_search-bar {
+      width: 200px;
+      height: 30px;
+      margin-top: 80px;
+      background-color: white;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      border: 1px solid #cecece;
+  }
+
+  #main_search-bar div {
+      margin-top: 5px;
+  }
+
+  #main_search-bar input {
+      flex: 0.9;
+      height: 28px;
+      border: none;
+      outline: none;
+      font-size: 12px;
+      font-weight: bold;
+  }
+        .right-menu-section button {
+            width: 60%;
+            margin-left: 17%;
+            color: white;
+            background-color: red;
+            padding: 10px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: 1px solid red;
+        }
+    
+        .right-menu-section button:hover {
+            font-size: 20px;
+            border: 1px solid rgba(32, 33, 36, .6509803921568628);
+            background-color: rgba(32, 33, 36, .6509803921568628);
+        }
+/* Bucket CSS Starts From Here */
+
+ #Chick_bucket {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 30px;
+     margin-right: 85px;
+ }
+
+ #Chick_bucket>div {
+     width: 400px;
+     padding-bottom: 25px;
+     margin-bottom: 25px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+ }
+
+ #Chick_bucket h3 {
+     padding-left: 6%;
+ }
+
+ #Chick_bucket h4 {
+     padding-left: 6%;
+ }
+
+ #Chick_bucket p {
+     padding-left: 6%;
+ }
+
+
+ #Chick_bucket img {
+     width: 400px;
+     padding-left: 0%;
+ }
+
+ #Biryani_bucket {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 30px;
+     margin-right: 85px;
+ }
+
+ #Biryani_bucket>div {
+     width: 400px;
+     padding-bottom: 25px;
+     margin-bottom: 25px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+ }
+
+ #Biryani_bucket h3 {
+     padding-left: 6%;
+ }
+
+ #Biryani_bucket h4 {
+     padding-left: 6%;
+ }
+
+ #Biryani_bucket p {
+     padding-left: 6%;
+ }
+
+
+ #Biryani_bucket img {
+     width: 400px;
+     padding-left: 0%;
+ }
+
+ #Box_Meal {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 30px;
+     margin-right: 85px;
+ }
+
+ #Box_Meal>div {
+     width: 400px;
+     padding-bottom: 25px;
+     margin-bottom: 25px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+ }
+
+ #Box_Meal h3,
+ h4 {
+     padding-left: 6%;
+ }
+
+ #Box_Meal p {
+     padding-left: 6%;
+ }
+
+ .description {
+     height: 50px;
+     margin-bottom: 20px;
+     overflow: hidden;
+ }
+
+ #Box_Meal img {
+     width: 400px;
+     padding-left: 0%;
+ }
+
+ #Burger {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 30px;
+     margin-right: 85px;
+ }
+
+ #Burger>div {
+     width: 400px;
+     padding-bottom: 25px;
+     margin-bottom: 25px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+ }
+
+ #Burger h3 {
+     padding-left: 6%;
+ }
+
+ #Burger p {
+     padding-left: 6%;
+ }
+
+ .description {
+     height: 50px;
+     margin-bottom: 20px;
+     overflow: hidden;
+ }
+
+ #Burger img {
+     width: 400px;
+     padding-left: 0%;
+ }
+
+ #Stay {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 30px;
+     margin-right: 85px;
+ }
+
+ #Stay>div {
+     width: 400px;
+     padding-bottom: 25px;
+     margin-bottom: 25px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+ #Stay h3 {
+     padding-left: 6%;
+ }
+
+ #Stay p {
+     padding-left: 6%;
+ }
+
+ .description {
+     height: 50px;
+     margin-bottom: 20px;
+     overflow: hidden;
+ }
+
+ #Stay img {
+     width: 400px;
+     padding-left: 0%;
+ }
+
+ #Snack {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 30px;
+     margin-right: 85px;
+ }
+
+ #Snack>div {
+     width: 400px;
+     padding-bottom: 25px;
+     margin-bottom: 25px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+ #Snack h3 {
+     padding-left: 6%;
+ }
+
+ #Snack p {
+     padding-left: 6%;
+ }
+
+
+
+ #Snack img {
+     width: 400px;
+     padding-left: 0%;
+ }
+
+ #Beverage {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 30px;
+     margin-right: 85px;
+ }
+
+ #Beverage>div {
+     width: 400px;
+     padding-bottom: 25px;
+     margin-bottom: 25px;
+     border-radius: 10px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ }
+
+ #Beverage h3 {
+     padding-left: 6%;
+ }
+
+ #Beverage p {
+     padding-left: 6%;
+ }
+
+ #Beverage img {
+     width: 400px;
+     padding-left: 0%;
+ }
+
+
+
+/* Footer CSS Starts From Here */
+
+
+.footer {
+    width: 100%;
+    background-color: rgb(32, 33, 36);
+    margin-top: 10%;
+    padding-top: 5%;
+    margin-bottom: 0%;
+    position: sticky;
+}
+
+.Logo {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.Logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.footerFoot {
+    display: flex;
+    margin-bottom: 5%;
+    padding-right: 2%;
+}
+
+.footerFoot ul {
+    margin-right: 50px;
+}
+
+.footerFoot ul li {
+    list-style: none;
+    color: #fff;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    cursor: pointer;
+    font-weight: 200;
+}
+
+.location {
+    display: flex;
+}
+
+.location div a {
+    color: #fff;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 15px;
+}
+
+.locationLogo {
+    margin-right: 10px;
+}
+
+.locationLogo img {
+    width: 11px;
+    height: 15px;
+}
+
+.buttonLogos {
+    display: flex;
+    margin-left: 100px;
+}
+
+.buttonLogo1 {
+    margin-right: 30px;
+}
+
+.buttonLogo1 img,
+.buttonLogo2 img {
+    width: 119.7px;
+    height: 40.5px;
+    cursor: pointer;
+}
+
+.bottomMost {
+    display: flex;
+    justify-content: center;
+    margin-left: 40%;
+}
+
+.copyright {
+    margin-right: 40%;
+    padding-top: 15px;
+}
+
+.copyright p {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    opacity: .9;
+    line-height: 12px;
+    color: #dbdbdb;
+}
+
+.socialMedia ul {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.socialMedia ul li {
+    margin-right: 10px;
+}
