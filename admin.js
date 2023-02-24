@@ -46,7 +46,7 @@ async function addUser(newuser){
 
 
 let foodsaleobj = {
-    burger : 50,
+    burger : 51,
     beverage : 20,
     dessert : 10,
     "biryani bucket": 27,
