@@ -1,70 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
-
-   
+    <title>MY CART</title>
+    <script src="https://kit.fontawesome.com/2af41ecea6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cart.css">
 </head>
-<body>
-    <header>
-        <div id="mobile_nav">
-           
-            <a href="index.html"><img src="images/bfccc.jpg" alt="kfc"></a>
-            <a href="cart.html"><i class="fas fa-shopping-bag fa-1x "></i></a>
-        </div>
-        <div class="nav-top">
-            <img src="images/navline.jpg" alt="lines" style="height: 80%; width: 4%;">
-        </div>
-        <nav>
-            <div class="box15">
-                <a href="index.html"><img class="img_align" src="images\bfccc.jpg" alt="chicken"></a>
-                <a href="menu.html">Menu</a>
-               
-            </div>
-            <div class="box25">
-                <button id="startorder" onclick="homePage()"class="btn-class">Start Order</button>
-               
-            </div>
-        </nav>
-        
-    </header>
 
-     <!-- login -->
-    <div id="container1">
-        <div id="box1">
-            <img src="images\Screenshot.jpg" alt="">
-        </div>
-        <div id="box2">
-            <div id="box2_1">
-                <div>SIGN IN TO YOUR BFC ACCOUNT</div>
-                <form action="">
-                    <input  id="email" type="email" placeholder="Email">
-                    <hr>
-                    <br>
-                    <label for="">
-                        <input id="password" type="password" placeholder="Password">
-                        <input type="text" placeholder="forget?" id="forget">
-                        <hr>
-                    </label>
-                    <br>
-                    <input type="submit" id="submitbutton" value="Log In">
-                    <br>
-                    <br>
-                    <br>
-                    <h4 style="margin-top:5px;">Don't have an account? <a href="signinpage.html">register here</a>
-                       
-                    </h4>
-                </form>
-            </div>
+<body>
+    <div id="navbar4">
+        <button id="gobackmenu" onclick="backtomenu()">Back to Menu</button>
+        <a href="index.html">
+            
+        <button id="login" onclick="loginPage()"><i class="far fa-user-circle fa-2x"></i></button>
+    </div>
+   
+   
+    <img class="threelines" src="images/nav.jpeg">
+    <h1>MY BAG</h1>
+    <div id="container44">
+        <div id="leftdiv"></div>
+        <div id="rightdiv4">
+            <table>
+                <thead>
+                    <tr></tr>
+                </thead>
+                <tbody>
+                    </tr>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td class="subtotal"></td>
+                    </tr>
+                    <tr>
+                        <td>Tax</td>
+                        <td class="tax">lmno</td>
+                    </tr>
+                    <tr>
+                        <td>Estimated Total</td>
+                        <td class="estimated">lmno</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button id="checkoutbutton" style="width: 100%;" onclick="paymentfunction()"> CHECKOUT</button>
         </div>
     </div>
- 
-
    
+
+    <!-- Bottom panel -->
+ 
 
     <footer>
         <div id="Tfooter">
@@ -112,7 +98,9 @@
     </footer>
 
 
-
-
 </body>
+
 </html>
+<script>
+  
+</script>

@@ -265,74 +265,61 @@ td {
 
 /* bottom bar */
 
-#container4 {
-    background-color: rgb(32, 33, 36);
-    padding: 50px 250px;
-    text-align: justify;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif
+footer{
+    width: 100%;
+    background-color: #202124;
+    padding: 100px 100px 10px 100px;
 }
-
-p {
-    width: 70%;
-    font-size: 12px;
-}
-
-#boxes4 {
+#rfooter{
     display: flex;
-    margin: auto;
-    margin-top: 50px;
-    /* border: 1px solid red; */
+    width: 20%;
+    justify-content: center;
+    padding: 20px 50px;
 }
-
-ul {
-    list-style-type: none;
+#rfooter>img{
+    width: 3em;
+    height: 3em;
 }
-
-li {
-    font-size: 12px;
-    margin-bottom: 7px;
-}
-
-li:hover {
-    text-decoration: underline;
-}
-
-.cards4 {
-    width: 18%;
-}
-
-ul>p {
-    font-size: 14px;
-}
-
-#lastbox4 {
+#Tfooter{
     display: flex;
-   
+}
+#linksF{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 60%;
+}
+.linkCard{
+    display: flex;
+    flex-direction: column;
+}
+.linkCard>a{
+    text-decoration: none;
+    color: #E3E3E3;
+    font-weight: 100;
+    margin: 5px;
+}
+.linkCard>a:hover{
+    font-weight: 600;
+}
+#app{
+    display: flex;
+    width: 20%;
+    justify-content: space-around
+}
+#app>img{
+    width: 100px;
     height: 50px;
-    margin-top: 60px;
 }
-
-.section4 {
+#Dfooter{
+    height: 50px;
+    color: #DBDBDB;
+    font-size: 12px;
+    margin-top: 90px;
     display: flex;
-    
-    width: 75%;
-    margin-right: 80px;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-.section4>div:hover {
-    text-decoration: underline;
-}
-
-.section4>div {
-    width: 19%;
-    margin-right: 5px;
-    border-right: 1px solid gray;
-}
-
-.section4>:nth-child(5) {
-    border-right: none;
-}
 
 @media only screen and (min-width:0px) and (max-width:1024px) {
     #boxes4 {
