@@ -10,6 +10,19 @@
 </head>
 
 <body>
+    <nav>
+        <div id="leftNav">
+            <img src="images\bfccc.jpg" alt="BFC" onclick="location.href='index.html';">
+            <h3 onclick="location.href='menu.html';" id="menuBtn">Menu</h3>
+            <h3 onclick="location.href='deals.html';" id="dealsBtn">Deals</h3>
+        </div>
+        <div id="rightNav">
+            <h3 onclick="location.href='login.html'" id="signInBtn">Sign In</h3>
+            <h3 style="color: gray; font-size: 30px;">|</h3>
+            <h3 id="totalAmount">₹0</h3>
+            <img src="images\cartBucket.jpg" alt="">
+        </div>
+    </nav>
     <div id="header"></div>
     <div id="main_container">
         <div class="left-menu-section">
@@ -72,25 +85,7 @@
             </div>
         </div>
     </div>
-    <div id="popup_container">
-        <div id="popup_left">
-            <div class="strips">
-                <span class="strip-lines"></span>
-                <span class="strip-lines"></span>
-                <span class="strip-lines"></span>
-            </div>
-        </div>
-        <div id="popup_right">
-            <div id="popup_search-bar">
-                <div><img src="https://online.kfc.co.in/static/media/searchIcon.0e00b33c.svg" alt=""></div>
-                <input type="text" id="popup_searched_item" placeholder="Search our menu">
-            </div>
-            <hr>
-            <div id="searched_food"></div>
-
-        </div>
-    </div>
-
+   
 
 
     <!-- Footer Starts -->
@@ -98,11 +93,11 @@
     <div class="footer">
         <div class="footerFoot">
             <div class="Logo">
-                <img src="Logo.jpeg">
+                <img src="/images/bfccc.jpg">
             </div>
 
             <ul>
-                <li>KFC Food</li>
+                <li>BFC Food</li>
                 <li>Menu</li>
                 <li>Order Lookup</li>
                 <li>Gift Card</li>
@@ -112,7 +107,7 @@
                 <li>Support</li>
                 <li>Get Help</li>
                 <li>Contact Us</li>
-                <li>KFC Feedbacks</li>
+                <li>BFC Feedbacks</li>
             </ul>
 
             <ul>
@@ -124,9 +119,9 @@
             </ul>
 
             <ul>
-                <li>KFC India</li>
+                <li>BFC India</li>
                 <li>About KFC</li>
-                <li>KFC Care</li>
+                <li>BFC Care</li>
                 <li>Careers</li>
                 <li>Our Golden Past</li>
             </ul>
@@ -251,7 +246,7 @@
         });
 
     }
-    function checkDuplicate(product) {
+    function check(product) {
         for (let i = 0; i < CartArr.length; i++) {
 
             if (CartArr[i].id === product.id) {
