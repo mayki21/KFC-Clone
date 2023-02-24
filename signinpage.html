@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    
+   
+    <link rel="stylesheet" href="signinpage.css">
+   
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <header>
+        <div id="mobile_nav">
+           
+            <a href="index.html"><img src="images/nav.jpeg" alt="bfc"></a>
+            <a href="cart.html"><i class="fas fa-shopping-bag fa-1x "></i></a>
+        </div>
+        <div class="nav-top">
+            <img src="images/nav.jpeg" alt="lines" style="height: 80%; width: 4%;">
+        </div>
+        <nav>
+            <div class="box1_5">
+                <a href="index.html"><img class="img_align" src="images/bfccc.jpg" alt="chicken"></a>
+                <a href="homepage.html">Menu</a>
+                 
+            </div>
+            <div class="box2_5">
+                <button id="startorder" class="btn-class" onclick="homePage()">Start Order</button>
+                <a href="login.html"></a>
+                
+            </div>
+        </nav>
+       
+    </header>
+
+    <!-- signin -->
+    <div id="container1">
+        <div id="box1">
+            <img src="images/Screenshot.jpg" alt="" style="height: 100%;">
+        </div>
+        <div id="box2">
+            <div id="box2_1">
+                <div>
+                    <h1>CREATE AN ACCOUNT</h1>
+                </div>
+                <form>
+                    <input id="firstname" type="text" placeholder="First Name*">
+                    <hr>
+                    <input id="lastname" type="text" placeholder="Last Name*">
+                    <hr>
+                    <input id="email" type="email" placeholder="Email*">
+                    <hr>
+                    <input id="password" type="password" placeholder="Password*">
+                    <hr>
+                    <input id="confirmpassword" type="password" placeholder="Confirm Password*">
+                    <hr>
+                    <br>
+
+                    <div>
+                        <input id="submitbutton" type="submit" value="Create Account">
+                        <p style="text-align: center; font-size: 15px; margin-top: 8px; margin-bottom: 10px;">Already a
+                            member
+                            <a href="login.html">Sign In?</a>
+                        </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+   <!-- bottom bar -->
+
+    <div id="container4">
+        <div id="boxes4">
+            <div class="cards4">
+                <img src="images\Screenshot (74).jpg">
+            </div>
+            <div class="cards4">
+                <ul>
+                    <p>BFC Food</p>
+                    <li>Menu</li>
+                    <li>Full Nutrition Guide</li>
+                  
+                </ul>
+            </div>
+            <div class="cards4">
+                <ul>
+                    <p>Company</p>
+                    <li>About BFC</li>
+                    <li>How We Make Chicken</li>
+                    <li>BFC Foundation</li>
+                    <li>Company Responsibility</li>
+               
+                </ul>
+            </div>
+            <div class="cards4">
+                <ul>
+                    <p>Career</p>
+                    <li>Restaurant Careers</li>
+                    <li>Corporate Careers</li>
+               
+                </ul>
+            </div>
+            <div class="cards4">
+                <ul>
+                    <p>Resources</p>
+                    <li>FAQs</li>
+                    <li>Contact Us</li>
+           
+                </ul>
+            </div>
+            <div class="cards4">
+                <ul>
+                    <p>Find a BFC</p>
+                    <li>Find a BFC</li>
+                </ul>
+            </div>
+        </div>
+        <div id="lastbox4">
+            <div class="section4">
+                <div>
+                    <p>Privacy Policy </p>
+                </div>
+                <div>
+                    <p>Update 12/2021</p>
+                </div>
+                <div>
+                    <p>Terms Of Use</p>
+                </div>
+                <div>
+                    <p>Our Cookies & Ads</p>
+                </div>
+                <div>
+                    <p>Do Not Sell My Personal Information</p>
+                </div>
+            </div>
+            <div>
+                <p>Copyright © BFC Corporation 2022 All Rights Reserved</p>
+            </div>
+            <div style="display: flex;">
+                <i class="fab fa-instagram" style="margin-right: 3px;"></i>
+                <i class="fab fa-facebook" style="margin-right: 3px;"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+        <div style="border-left:gray;">
+            <p> Asessibility Statement</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+   
+
+   
+
+  
+
+    document.querySelector("form").addEventListener("submit", myFunction)
+    
+    
+
+async function myFunction()
+{
+  try {
+
+    let obj={
+          firstname : document.querySelector("#firstname").value,
+         lasttname : document.querySelector("#lastname").value,
+         email : document.querySelector("#email").value,
+         pass : document.querySelector("#password").value,
+         confirm : document.querySelector("#confirmpassword").value,
+  
+     }
+     
+
+     let register_request=await fetch(`http://localhost:3000/users`,{
+      method : 'POST',
+      headers : {
+        "Content-Type" : 'application/json'
+      },
+      body : JSON.stringify(obj)
+
+     })
+   
+  } 
+  catch (error)
+   {
+    console.log(error);
+   }
+  
+  
+}
+
+
+
+
+
+    
+
+</script>
