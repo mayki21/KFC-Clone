@@ -54,7 +54,7 @@
                     <input type="text" id="main_searched_item" placeholder="Search our menu">
                 </div>
                 <hr>
-                <div id="SearchedItem">
+                <div id="SearchedItem"></div>
                 <div id="chicken_bucket">
                     <h2><a name="chicken_bucket">CHICKEN BUCKET</a></h2>
                     <div id="Chick_bucket"></div>
@@ -83,7 +83,7 @@
                     <h2><a name="beverages">BEVERAGES</a></h2>
                     <div id="Beverage"></div>
                 </div>
-                </div>
+    
             </div>
         </div>
     </div>
@@ -140,7 +140,13 @@
 
 </body>
 <script>
-
+    let chickenBucketContainer = document.getElementById("Chick_bucket");
+    let biryaniBucketContainer = document.getElementById("Biryani_bucket");
+    let boxMealsContainer = document.getElementById("Box_Meal");
+    let burgersContainer = document.getElementById("Burger");
+    let stayHomeSpecialsContainer = document.getElementById("Stay_home");
+    let snacksContainer = document.getElementById("Snack");
+    let beveragesContainer = document.getElementById("Beverage");
 
     let API ="http://localhost:3000/recipes";
     let arr=[];
@@ -161,15 +167,7 @@
     let CartArr = JSON.parse(localStorage.getItem("cart")) || [];
 
     function DisplayProduct(data) {
-
-        let chickenBucketContainer = document.getElementById("Chick_bucket");
-        let biryaniBucketContainer = document.getElementById("Biryani_bucket");
-        let boxMealsContainer = document.getElementById("Box_Meal");
-        let burgersContainer = document.getElementById("Burger");
-        let stayHomeSpecialsContainer = document.getElementById("Stay_home");
-        let snacksContainer = document.getElementById("Snack");
-        let beveragesContainer = document.getElementById("Beverage");
-
+        
 
         chickenBucketContainer.innerHTML = "";
         biryaniBucketContainer.innerHTML = "";
@@ -178,7 +176,7 @@
         stayHomeSpecialsContainer.innerHTML = "";
         snacksContainer.innerHTML = "";
         beveragesContainer.innerHTML = "";
-
+        
 
         data.forEach((product) => {
 
@@ -249,6 +247,13 @@
 
     Total.innerText=`₹${sum}`
    //Search Function
+   let MainC=document.getElementById("chicken_bucket");
+   let MainBir = document.getElementById("biryani_bucket")
+   let MainBox = document.getElementById("box_meals")
+   let MainBurger = document.getElementById("burgers")
+   let MainSna = document.getElementById("snacks")
+   let MainStay = document.getElementById("stay_home_specials")
+   let MainBev = document.getElementById("beverages")
 
 
      let Display = document.getElementById("SearchedItem");
@@ -256,7 +261,29 @@
         search.addEventListener("keypress", (e) => {
             if (e.key === "Enter") {
 
+                MainC.innerHTML="";
+                MainBir.innerHTML="";
+                MainBox.innerHTML="";
+                MainBurger.innerHTML="";
+                MainSna.innerHTML="";
+                MainStay.innerHTML="";
+                MainBev.innerHTML="";
+
+
+
+
+
+
                 Display.innerHTML = "";
+                chickenBucketContainer.innerHTML = "";
+                biryaniBucketContainer.innerHTML = "";
+                boxMealsContainer.innerHTML = "";
+                burgersContainer.innerHTML = "";
+                stayHomeSpecialsContainer.innerHTML = "";
+                snacksContainer.innerHTML = "";
+                beveragesContainer.innerHTML = "";
+                
+
                 let searchItem = search.value;
                 console.log(searchItem)
 
@@ -304,7 +331,7 @@
                     card.append(image, type, name, price, details, category, addToCartButton);
                     Display.append(card)
                 });
-                console.log(filtered)
+                
             }
 
         });
