@@ -439,6 +439,7 @@ footer {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+
 }
 
 /* SearchedItem CSS Starts From Here */
@@ -473,4 +474,6 @@ footer {
 #SearchedItem img {
     width: 400px;
     padding-left: 0%;
+
+
 }
