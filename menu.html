@@ -20,8 +20,8 @@
             <div id="rightNav">
                 <h3 onclick="location.href='login.html'" id="signInBtn">Sign In</h3>
                 <h3 style="color: gray; font-size: 30px;">|</h3>
-                <h3 id="totalAmount">₹0</h3>
-                <img src="images\cartBucket.jpg" alt="">
+                <h3 id="totalAmount">₹0</h3> 
+                <img src="images\cartBucket.jpg" alt="" onclick="location.href='cart.html';">
             </div>
         </nav>
     </header>
@@ -161,7 +161,7 @@
 <script>
 
 
-    let API = "https://63f5416b2213ed989c526a03.mockapi.io/fooditems";
+    let API = "http://localhost:3000/recipes";
 
     async function FetchData() {
         try {
