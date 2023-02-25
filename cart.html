@@ -16,51 +16,25 @@
             <div id="leftNav">
                 <img src="images\bfccc.jpg" alt="BFC" onclick="location.href='index.html';">
                 <h3 onclick="location.href='menu.html';" id="menuBtn">Menu</h3>
-                <h3 onclick="location.href='deals.html';" id="dealsBtn">Deals</h3>
+                <h3></h3>
+                <!-- <h3 onclick="location.href='deals.html';" id="dealsBtn">Deals</h3> -->
             </div>
             <div id="rightNav">
-                <h3 onclick="location.href='login.html'" id="signInBtn">Sign In</h3>
+                <!-- <h3 onclick="location.href='login.html'" id="signInBtn">Sign In</h3>
                 <h3 style="color: gray; font-size: 30px;">|</h3>
                 <h3 id="totalAmount">₹0</h3>
-                <img src="images\cartBucket.jpg" alt="" onclick="location.href='cart.html';">
+                <img src="images\cartBucket.jpg" alt="" onclick="location.href='cart.html';"> -->
             </div>
         </nav>
     </header>
-   
-    <img class="threelines" src="images/nav.jpeg">
-    <h1>MY BAG</h1>
-    <div id="container44">
-        <div id="leftdiv">
-           
-        </div>
-        <div id="rightdiv4">
-            <table>
-                <thead>
-                    <tr></tr>
-                </thead>
-                <tbody>
-                    </tr>
-                    <tr>
-                        <td>Subtotal</td>
-                        <td class="subtotal"></td>
-                    </tr>
-                    <tr>
-                        <td>Tax</td>
-                        <td class="tax">lmno</td>
-                    </tr>
-                    <tr>
-                        <td>Estimated Total</td>
-                        <td class="estimated">lmno</td>
-                    </tr>
-                </tbody>
-            </table>
-            <button id="checkoutbutton" style="width: 100%;" onclick="paymentfunction()"> CHECKOUT</button>
-        </div>
+    <div id="title">
+        <img src="images\line.PNG" alt="">
+        <h1>MY CART</h1>
     </div>
-   
-
-    <!-- Bottom panel -->
- 
+    <div id="container">
+        <div id="ItemList"></div>
+        <div id="checkoutBox"></div>
+    </div> 
 
     <footer>
         <div id="Tfooter">
@@ -109,54 +83,5 @@
 
 
 </body>
-
+<script src="script\cart.js"></script>
 </html>
-<script>
-
-
-let cartdata = JSON.parse(localStorage.getItem("cart"));
-
-if(cartdata==null)
-{
-    cartdata=[]
-}
-
-let dataappend=document.getElementById("leftdiv");
-Display(cartdata);
-console.log(cartdata)
-
-function Display(data)
-{
-    dataappend.innerHTML="";
-    data.forEach((element,i) => {
-
-            let card = document.createElement("div");
-            card.setAttribute("class","cartcard");
-            let image = document.createElement("img");
-            let name = document.createElement("h3");
-            let price = document.createElement("h4");
-            let button=document.createElement("button");
-            button.innerText="Remove";
-            button.setAttribute("class","removebtn");
-            button.addEventListener('click',()=>{
-
-            });
-            image.src = element.image;
-            name.textContent =element.name;
-            price.textContent = `₹${element.price}`;
-
-            card.append(image, name, price,button);
-            dataappend.append(card);
-
-
-        
-    });
-}
-
-
-
-
-
-
-  
-</script>

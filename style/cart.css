@@ -47,179 +47,72 @@ nav>#rightNav>h3:hover{
     cursor: pointer;
 }
 
-#locbar4 {
-    background-color: rgb(32, 33, 36);
-    height: 40px;
-    text-align: center;
-    padding: 10px;
-    color: white;
-}
-
-
-#navbar4>button:nth-child(1) {
-    border-radius: 20px;
-    color: black;
-    border: 2px solid black;
-    background-color: white;
-    height: 30px;
-    width: 120px;
-    margin-top: 10px;
-    padding: 5px;
-}
-
-#container44 {
-    display: flex;
+#title{
     width: 80%;
-    margin: 20px auto 30px;
-    /* border: 1px solid red; */
-    gap: 20px;
+    margin: auto;
+    padding-bottom: 2%;
 }
 
-h1,
-.threelines {
-    margin-left: 200px
-}
+/* cartbody */
 
-#leftdiv {
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-   
-    gap: 20px;
-    background-color: rgb(248, 247, 245);
-    border: 1px solid black;
-}
-.cartcard{
-    display: flex;
-    justify-content: space-between;
-    align-items: center ;
-    padding: 0% 5% 5% 0%;
-}
-.cartcard>img{
-    width: 25%;
-
-}
-.removebtn{
-    background-color:rgb(228, 0, 43);
-    color:white;
-    width: 20%;
-    height: 30%;
-    padding: 5px;
-    border-radius: 20px;
-    text-decoration: none;
-    border: none;
-    font-size: 16px;
-    /* padding: 5%; */
-}
-
-
-table {
-    width: 100%;
-    height: 300px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    padding: 10px;
-}
-
-#box44 {
+#container{
+    width: 80%;
+    margin: auto;
+    border: 1px solid red;
+    height: 100vh;
     display: flex;
     justify-content: space-around;
-    gap: 30px;
 }
 
-thead {
-    text-align: center;
-    font-weight: bold;
+#ItemList{
+    width: 65%;
 }
 
-.functionbutton,
-#checkoutbutton {
-    border-radius: 20px;
-    color: white;
-    border: none;
-    background-color: rgb(228, 0, 43);
+#checkoutBox{
+    width: 25%;
+    border: 1px solid green;
+}
+
+.cartcard{
+    background-color: #f8f7f5;
+    padding: 2%;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    margin: 20px ;
+}
+
+.detailsSec{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px ;
+}
+.detailsSec>img{
+    width: 25%;
+    border-radius: 5px;
+}
+
+.quantityBtn{
+    width: 30px;
     height: 30px;
-    width: 120px;
-    margin-top: 10px;
-    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    font-size: 20px;
 }
 
-#rightdiv4 {
-    width: 35%;
-}
-
-#login {
-    background-color: white;
-    border: none
-}
-
-#container4 {
-    background-color: rgb(32, 33, 36);
-    padding: 50px 250px;
-    text-align: justify;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif
-}
-
-#container4>p {
-    width: 70%;
-    font-size: 12px;
-}
-
-#boxes4 {
+.quantityBlock{
+    width: 30px;
+    height: 30px;
     display: flex;
-    margin: auto;
-    margin-top: 50px;
-    /* border: 1px solid red; */
+    align-items: center;
+    justify-content: center;
 }
 
-ul {
-    list-style-type: none;
-}
-
-li {
-    font-size: 12px;
-    margin-bottom: 7px;
-}
-
-li:hover {
-    text-decoration: underline;
-}
-
-.cards4 {
-    width: 18%;
-}
-
-ul>p {
-    font-size: 14px;
-}
-
-#lastbox4 {
+.quantitySec{
     display: flex;
-    /* border: 1px solid green; */
-    height: 50px;
-    margin-top: 60px;
 }
-
-.section4 {
-    display: flex;
-    /* border: 1px solid red; */
-    width: 75%;
-    margin-right: 80px;
-}
-
-.section4>div:hover {
-    text-decoration: underline;
-}
-
-.section4>div {
-    width: 19%;
-    margin-right: 5px;
-    border-right: 1px solid gray;
-}
-
-.section4>:nth-child(5) {
-    border-right: none;
-}
+/* footerPart */
 
 footer{
     width: 100%;
@@ -277,30 +170,5 @@ footer{
 }
 
 @media only screen and (min-width:0px) and (max-width:1024px) {
-    #boxes4 {
-        flex-direction: column;
-    }
-
-    .cards4 {
-        width: 100%;
-        height: 18px;
-        overflow: hidden;
-        text-align: center;
-    }
-
-    .cards4:nth-child(1) {
-        height: 150px;
-        margin-left: -60px;
-
-    }
-
-    i {
-        margin-right: 2px
-    }
-
-    #container44 {
-        flex-direction: column;
-    }
-
-
+    
 }
