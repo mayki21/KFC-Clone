@@ -178,12 +178,12 @@ body {
  #Biryani_bucket {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
-     grid-gap: 30px;
+     grid-gap: 1%;
      margin-right: 85px;
  }
 
  #Biryani_bucket>div {
-     width: 400px;
+     width: 100%;
      padding-bottom: 25px;
      margin-bottom: 25px;
      border-radius: 10px;
