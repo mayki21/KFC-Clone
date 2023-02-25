@@ -376,104 +376,67 @@ body {
 
 /* Footer CSS Starts From Here */
 
-
-.footer {
+footer {
     width: 100%;
-    background-color: rgb(32, 33, 36);
-    margin-top: 10%;
-    padding-top: 5%;
-    margin-bottom: 0%;
-    position: sticky;
+    background-color: #202124;
+    padding: 100px 100px 10px 20px;
 }
 
-.Logo {
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-.Logo img {
-    width: 60px;
-    height: 60px;
-}
-
-.footerFoot {
+#rfooter {
     display: flex;
-    margin-bottom: 5%;
-    padding-right: 2%;
-}
-
-.footerFoot ul {
-    margin-right: 50px;
-}
-
-.footerFoot ul li {
-    list-style: none;
-    color: #fff;
-    font-family: 'Fira Sans Condensed', sans-serif;
-    cursor: pointer;
-    font-weight: 200;
-}
-
-.location {
-    display: flex;
-}
-
-.location div a {
-    color: #fff;
-    font-family: 'Fira Sans Condensed', sans-serif;
-    font-size: 15px;
-}
-
-.locationLogo {
-    margin-right: 10px;
-}
-
-.locationLogo img {
-    width: 11px;
-    height: 15px;
-}
-
-.buttonLogos {
-    display: flex;
-    margin-left: 100px;
-}
-
-.buttonLogo1 {
-    margin-right: 30px;
-}
-
-.buttonLogo1 img,
-.buttonLogo2 img {
-    width: 119.7px;
-    height: 40.5px;
-    cursor: pointer;
-}
-
-.bottomMost {
-    display: flex;
+    width: 20%;
     justify-content: center;
-    margin-left: 40%;
+    padding: 20px 50px;
 }
 
-.copyright {
-    margin-right: 40%;
-    padding-top: 15px;
+#rfooter>img {
+    width: 3em;
+    height: 3em;
 }
 
-.copyright p {
-    font-family: 'Fira Sans Condensed', sans-serif;
-    font-size: 12px;
-    text-align: center;
-    opacity: .9;
-    line-height: 12px;
-    color: #dbdbdb;
-}
-
-.socialMedia ul {
+#Tfooter {
     display: flex;
-    padding-bottom: 10px;
 }
 
-.socialMedia ul li {
-    margin-right: 10px;
+#linksF {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 60%;
+}
+
+.linkCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.linkCard>a {
+    text-decoration: none;
+    color: #E3E3E3;
+    font-weight: 100;
+    margin: 5px;
+}
+
+.linkCard>a:hover {
+    font-weight: 600;
+}
+
+#app {
+    display: flex;
+    width: 20%;
+    justify-content: space-around
+}
+
+#app>img {
+    width: 100px;
+    height: 50px;
+}
+
+#Dfooter {
+    height: 50px;
+    color: #DBDBDB;
+    font-size: 12px;
+    margin-top: 90px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
