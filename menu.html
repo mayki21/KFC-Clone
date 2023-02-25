@@ -54,6 +54,7 @@
                     <input type="text" id="main_searched_item" placeholder="Search our menu">
                 </div>
                 <hr>
+                <div id="SearchedItem">
                 <div id="chicken_bucket">
                     <h2><a name="chicken_bucket">CHICKEN BUCKET</a></h2>
                     <div id="Chick_bucket"></div>
@@ -81,6 +82,7 @@
                 <div id="beverages" class="image_size">
                     <h2><a name="beverages">BEVERAGES</a></h2>
                     <div id="Beverage"></div>
+                </div>
                 </div>
             </div>
         </div>
@@ -140,13 +142,15 @@
 <script>
 
 
-    let API = "http://localhost:3000/recipes";
-
+    let API ="http://localhost:3000/recipes";
+    let arr=[];
     async function FetchData() {
         try {
             let request = await fetch(API);
             let data = await request.json();
 
+
+            arr=data
             console.log(data);
             DisplayProduct(data)
         } catch (err) {
@@ -237,6 +241,74 @@
         }
         return false;
     }
+    let Total=document.getElementById("totalAmount");
+    let sum=0;
+        for (let x = 0; x < CartArr.length;x++){
+            sum+=CartArr[x].price;
+        }
+
+    Total.innerText=`₹${sum}`
+   //Search Function
+
+
+     let Display = document.getElementById("SearchedItem");
+        let search = document.getElementById("main_searched_item")
+        search.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+
+                Display.innerHTML = "";
+                let searchItem = search.value;
+                console.log(searchItem)
+
+
+                 let filtered = arr.filter((element) => {
+                    if (
+                        element.name.toUpperCase().includes(searchItem.toUpperCase()) ===
+                        true
+                    ) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                });
+                 filtered.forEach((product) => {
+
+                    let card = document.createElement("div");
+                    let image = document.createElement("img");
+                    let name = document.createElement("h3");
+                    let category = document.createElement("p");
+                    let details = document.createElement("p");
+                    let price = document.createElement("h4");
+                    let type = document.createElement("h4");
+                    let addToCartButton = document.createElement("button");
+
+
+                    type.textContent = product.type;
+                    image.src = product.image;
+                    name.textContent = product.name;
+                    category.textContent = product.category;
+                    price.textContent = `₹${product.price}`;
+                    details.textContent = product.description;
+                    addToCartButton.textContent = "Add to Cart";
+
+                    addToCartButton.addEventListener("click", () => {
+                        if (check(product)) {
+                            alert("Product Already in Cart");
+                        } else {
+                            CartArr.push({ ...product, quantity: 1 });
+                            localStorage.setItem("cart", JSON.stringify(CartArr));
+                            alert("Product Added To Cart");
+                        }
+                    });
+
+                    card.append(image, type, name, price, details, category, addToCartButton);
+                    Display.append(card)
+                });
+                console.log(filtered)
+            }
+
+        });
+
 </script>
 
 </html>

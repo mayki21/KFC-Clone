@@ -16,4 +16,17 @@ setInterval(()=>{
     slideImg.setAttribute("src", posters[i]);
     banner.innerHTML=null;
     banner.append(slideImg);
-},2000)
+}, 2000)
+
+
+//Added Total amount Devnandan
+
+ let CartArr = JSON.parse(localStorage.getItem("cart"))
+  let Total=document.getElementById("totalAmount");
+    let sum=0;
+        for (let x = 0; x < CartArr.length;x++){
+            sum+=CartArr[x].price;
+        }
+
+Total.innerText = `₹${sum}`
+    //End

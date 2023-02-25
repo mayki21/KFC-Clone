@@ -440,3 +440,37 @@ footer {
     align-items: flex-end;
     justify-content: center;
 }
+
+/* SearchedItem CSS Starts From Here */
+#SearchedItem{
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        margin-right: 85px;
+}
+#SearchedItem>div {
+    width: 400px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#SearchedItem h3 {
+    padding-left: 6%;
+}
+
+#SearchedItem h4 {
+    padding-left: 6%;
+}
+
+#SearchedItem p {
+    padding-left: 6%;
+}
+
+
+#SearchedItem img {
+    width: 400px;
+    padding-left: 0%;
+}
