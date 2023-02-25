@@ -2642,7 +2642,7 @@
       "name": "Roti Sabzi",
       "price": "250",
       "category": "non-veg",
-      "id": "SOX239t"
+      "id": "NSNiYH2"
     }
   ],
   "areas": [
@@ -3119,9 +3119,9 @@
     {
       "id": 1,
       "name": "Abram Langtry",
-      "image": "/images/avatar/avatar1.jpeg",
+      "image": "https://img.freepik.com/free-photo/half-profile-image-handsome-young-caucasian-man-with-good-skin-brown-eyes-black-stylish-hair-stubble-posing-isolated-against-blank-wall-looking-front-him-smiling_343059-4560.jpg",
       "department": 1,
-      "salary": "500"
+      "salary": "10000"
     },
     {
       "id": 2,
@@ -3135,13 +3135,13 @@
       "name": "Giorgio Antonioni",
       "image": "/images/avatar/avatar1.jpeg",
       "department": 3,
-      "salary": 95000
+      "salary": 15000
     },
     {
       "name": "Himanshu",
       "image": "/images/avatar/avatar2.jpeg",
       "department": 4,
-      "salary": 100000,
+      "salary": 11000,
       "createdAt": 1670325954162,
       "id": "tEYFrHNsdO"
     },
@@ -3149,7 +3149,7 @@
       "name": "Prashant",
       "image": "/images/avatar/avatar2.jpeg",
       "department": 3,
-      "salary": 5000000,
+      "salary": 9000,
       "createdAt": 1670325954162,
       "id": "yjkyh1htCb"
     },
@@ -3157,21 +3157,29 @@
       "name": "Rushikesh",
       "image": "/images/avatar/avatar1.jpeg",
       "department": 3,
-      "salary": 3000000,
+      "salary": 5000,
       "createdAt": 1672901861637,
       "id": "fh2BHnLqlU"
+    },
+    {
+      "id": "g5qs2OrO86",
+      "name": "Kumar Vishwas",
+      "department": "4",
+      "salary": "5555",
+      "createdAt": 1672919913274,
+      "image": "/images/avatar/avatar1.jpeg"
     },
     {
       "id": "4FjVtmfUYz",
       "name": "Anand Kumar",
       "image": "/images/avatar/avatar2.jpeg",
-      "salary": "1000000"
+      "salary": "5000"
     },
     {
       "name": "Ajay Singh",
       "image": "/images/avatar/avatar1.jpeg",
       "department": "2",
-      "salary": "80",
+      "salary": "8000",
       "createdAt": 1672913508984,
       "id": "y1i4lO11Wk"
     },
@@ -3179,7 +3187,15 @@
       "id": "g5qs2OrO86",
       "name": "Kumar Vishwas",
       "department": "4",
-      "salary": "55555",
+      "salary": "5555",
+      "createdAt": 1672919913274,
+      "image": "/images/avatar/avatar1.jpeg"
+    },
+    {
+      "id": "g5qs2OrO86",
+      "name": "Kumar Vishwas",
+      "department": "4",
+      "salary": "5555",
       "createdAt": 1672919913274,
       "image": "/images/avatar/avatar1.jpeg"
     }

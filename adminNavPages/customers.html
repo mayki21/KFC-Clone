@@ -6,46 +6,98 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
     <style>
-        table tbody tr td #avatar{
+        table tbody tr td #avatar {
             width: 40px;
             height: 40px;
             border-radius: 50%;
             margin-left: 50px;
         }
-        table tbody tr td button{
+
+        table tbody tr td button {
             background: none;
             border: none;
             color: grey;
         }
-        #pages{
+
+        #pages {
             width: 30%;
             margin: auto;
             padding: 10px 90px 10px 90px;
         }
-        #pages button{
+
+        #pages button {
             margin: 10px;
             background-color: rgb(95, 90, 90);
             border: none;
             border-radius: 50%;
             color: white;
         }
+
+        .navbar {
+            margin: 0px 50px 0px 50px;
+        }
+
+        #logo img {
+            width: 80px;
+            margin: 20px 0px 0px 100px;
+        }
+
+        .search {
+            display: flex;
+            /* border: 1px solid black; */
+            width: 100%;
+            margin: auto;
+            margin-bottom: 20px;
+            justify-content: flex-end;
+        }
+
+        .search input {
+            margin-right: 10px;
+        }
     </style>
 
 </head>
 
 <body>
+    <div id="logo"><img src="/images/bfccc.jpg" alt=""></div>
 
-    <div class="navigation">
-        
-    </div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/adminPage.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/adminNavPages/orders.html">Orders</a>
+            </li>
+        </ul>
+        <!-- Navbar text-->
+
+    </nav>
+
+
+    <br>
+
+    
 
     <div class="container mt-3">
         <div id="main">
             <h2>Customer Details</h2>
             <p>Previous ordered customer details from <span> 2022-2023 </span></p>
+            <div class="search">
+                <input type="text" placeholder="Product name">
+                <button>Search</button>
+            </div>
             <table class="table table-dark table-striped" id="tablemaking">
                 <thead>
                     <tr>
@@ -60,13 +112,16 @@
 
                 <tbody>
                     <!-- add row -->
-                    
+
                 </tbody>
             </table>
         </div>
     </div>
     <div id="pages"></div>
-    
+
+
+
+
 
 </body>
 
@@ -82,15 +137,15 @@
 
     totalfetchedData()
 
-    function totalfetchedData(page=1){
-        fetch(`${url}/customerDetails`).then((res)=>res.json()).then((data)=>{
-            noOfItems=data.length;
+    function totalfetchedData(page = 1) {
+        fetch(`${url}/customerDetails`).then((res) => res.json()).then((data) => {
+            noOfItems = data.length;
         })
         fetchdata(page);
     }
 
 
-    async function fetchdata(page){
+    async function fetchdata(page) {
         try {
             let req = await fetch(`${url}/customerDetails?_limit=10&_page=${page}`);
             let res = await req.json();
@@ -104,9 +159,9 @@
         }
     }
 
-    function displayData(data){
+    function displayData(data) {
         let str = "";
-        data.forEach((el)=>{
+        data.forEach((el) => {
             str += `<tr dataset-id=${el.id}>
                         <td><img id="avatar" src="${el.avatar}" alt=""> </td>
                         <td>${el.name}</td>
@@ -116,36 +171,36 @@
                         <td><button class="remove">Remove</button></td>
                     </tr>`
         })
-        cont.innerHTML = str;  
+        cont.innerHTML = str;
 
-        
+
         let btn = document.querySelectorAll(".remove")
-        for(let i=0; i<btn.length; i++){
-            btn[i].addEventListener("click", (e)=>{
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener("click", (e) => {
                 removeData(globalArr, globalArr[i].id);
                 console.log(globalArr[i].id)
             })
         }
     }
 
-    function pagination(totalitems){
-        let pages = Math.ceil(totalitems/10);
+    function pagination(totalitems) {
+        let pages = Math.ceil(totalitems / 10);
         let str = "";
-        for(let i=1; i<=pages; i++){
+        for (let i = 1; i <= pages; i++) {
             str += `<button class="pageNo">${i}</button>`
         }
         pageWrapper.innerHTML = str;
 
         let pageNoarr = document.querySelectorAll(".pageNo");
-        for(let i=0; i<pageNoarr.length; i++){
-            pageNoarr[i].addEventListener("click",()=>{
+        for (let i = 0; i < pageNoarr.length; i++) {
+            pageNoarr[i].addEventListener("click", () => {
                 console.log(pageNoarr[i].innerHTML);             // this line has doubt
                 totalfetchedData(pageNoarr[i].innerHTML);
             })
         }
     }
 
-    async function removeData(arr, id){
+    async function removeData(arr, id) {
         // fetch(`${url}/customerDetails/${id}`, {
         //     method : "DELETE",
         //     headers: {
@@ -153,10 +208,10 @@
         //     }
         // }).then((res)=>console.log(res))
         try {
-            let req = await fetch(`${url}/customerDetails/${id}`,{
+            let req = await fetch(`${url}/customerDetails/${id}`, {
                 method: "DELETE",
-                headers : {
-                    "Content-Type" : "application/json"
+                headers: {
+                    "Content-Type": "application/json"
                 }
             })
             console.log(req);
