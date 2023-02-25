@@ -6,23 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY CART</title>
-    <script src="https://kit.fontawesome.com/2af41ecea6.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/2af41ecea6.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
-    <div id="navbar4">
-        <button id="gobackmenu" onclick="backtomenu()">Back to Menu</button>
-        <a href="index.html">
-            
-        <button id="login" onclick="loginPage()"><i class="far fa-user-circle fa-2x"></i></button>
-    </div>
-   
+    <header>
+        <nav>
+            <div id="leftNav">
+                <img src="images\bfccc.jpg" alt="BFC" onclick="location.href='index.html';">
+                <h3 onclick="location.href='menu.html';" id="menuBtn">Menu</h3>
+                <h3 onclick="location.href='deals.html';" id="dealsBtn">Deals</h3>
+            </div>
+            <div id="rightNav">
+                <h3 onclick="location.href='login.html'" id="signInBtn">Sign In</h3>
+                <h3 style="color: gray; font-size: 30px;">|</h3>
+                <h3 id="totalAmount">₹0</h3>
+                <img src="images\cartBucket.jpg" alt="" onclick="location.href='cart.html';">
+            </div>
+        </nav>
+    </header>
    
     <img class="threelines" src="images/nav.jpeg">
     <h1>MY BAG</h1>
     <div id="container44">
-        <div id="leftdiv"></div>
+        <div id="leftdiv">
+           
+        </div>
         <div id="rightdiv4">
             <table>
                 <thead>
@@ -102,5 +112,51 @@
 
 </html>
 <script>
+
+
+let cartdata = JSON.parse(localStorage.getItem("cart"));
+
+if(cartdata==null)
+{
+    cartdata=[]
+}
+
+let dataappend=document.getElementById("leftdiv");
+Display(cartdata);
+console.log(cartdata)
+
+function Display(data)
+{
+    dataappend.innerHTML="";
+    data.forEach((element,i) => {
+
+            let card = document.createElement("div");
+            card.setAttribute("class","cartcard");
+            let image = document.createElement("img");
+            let name = document.createElement("h3");
+            let price = document.createElement("h4");
+            let button=document.createElement("button");
+            button.innerText="Remove";
+            button.setAttribute("class","removebtn");
+            button.addEventListener('click',()=>{
+
+            });
+            image.src = element.image;
+            name.textContent =element.name;
+            price.textContent = `₹${element.price}`;
+
+            card.append(image, name, price,button);
+            dataappend.append(card);
+
+
+        
+    });
+}
+
+
+
+
+
+
   
 </script>

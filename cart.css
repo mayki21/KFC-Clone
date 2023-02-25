@@ -8,11 +8,43 @@ body {
     font-family: Arial, Helvetica, sans-serif
 }
 
-#navbar4 {
+header{
+    top: 0;
+    position: sticky;
+    background-color: white;
+    z-index: 1;
+}
+nav{
     display: flex;
-    justify-content: space-around;
-    padding: 10px;
-
+    height: 100px;
+    padding: 0px 75px;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+#leftNav{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: space-between;
+    
+}
+#leftNav>img{
+    height: 50%;
+}
+nav>#leftNav>h3:hover{
+    cursor: pointer;
+}
+#rightNav{
+    display: flex;
+    align-items: center;
+    width: 15%;
+    justify-content: space-between;
+}
+#rightNav>img{
+    height: 50%;
+}
+nav>#rightNav>h3:hover{
+    cursor: pointer;
 }
 
 #locbar4 {
@@ -22,6 +54,7 @@ body {
     padding: 10px;
     color: white;
 }
+
 
 #navbar4>button:nth-child(1) {
     border-radius: 20px;
@@ -51,9 +84,34 @@ h1,
     width: 65%;
     display: flex;
     flex-direction: column;
+   
     gap: 20px;
-    background-color: rgb(248, 247, 245)
+    background-color: rgb(248, 247, 245);
+    border: 1px solid black;
 }
+.cartcard{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 0% 5% 5% 0%;
+}
+.cartcard>img{
+    width: 25%;
+
+}
+.removebtn{
+    background-color:rgb(228, 0, 43);
+    color:white;
+    width: 20%;
+    height: 30%;
+    padding: 5px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+    /* padding: 5%; */
+}
+
 
 table {
     width: 100%;
