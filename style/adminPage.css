@@ -1,13 +1,12 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap'); */
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
-:root
-{
+
+:root {
     --blue: #287bff;
     --white: #fff;
     --grey: #f5f5f5;
@@ -15,15 +14,18 @@
     --black2: #999;
     --red1: #e4002b;
 }
-body{
+
+body {
     min-height: 100vh;
     overflow-x: hidden;
 }
-.container{
+
+.container {
     position: relative;
     width: 100%;
 }
-.navigation{
+
+.navigation {
     position: fixed;
     width: 300px;
     height: 100%;
@@ -32,31 +34,37 @@ body{
     transition: 0.5s;
     overflow: hidden;
 }
-.navigation.active{
+
+.navigation.active {
     width: 72px;
 }
-.navigation ul{
+
+.navigation ul {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
-.navigation ul li{
+
+.navigation ul li {
     position: relative;
     width: 100%;
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
+
 .navigation ul li:hover,
 .navigation ul li.hovered {
     background: var(--white);
 }
-.navigation ul li:nth-child(1){
+
+.navigation ul li:nth-child(1) {
     margin-bottom: 40px;
     pointer-events: none;
 }
-.navigation ul li a{
+
+.navigation ul li a {
     position: relative;
     display: block;
     width: 100%;
@@ -64,11 +72,13 @@ body{
     text-decoration: none;
     color: var(--white);
 }
+
 .navigation ul li:hover a,
-.navigation ul li.hovered a{
+.navigation ul li.hovered a {
     color: var(--red1);
 }
-.navigation ul li a .icon{
+
+.navigation ul li a .icon {
     position: relative;
     display: block;
     min-width: 60px;
@@ -76,10 +86,12 @@ body{
     line-height: 70px;
     text-align: center;
 }
-.navigation ul li a .icon ion-icon{
+
+.navigation ul li a .icon ion-icon {
     font-size: 1.75em;
 }
-.navigation ul li a .title{
+
+.navigation ul li a .title {
     position: relative;
     display: block;
     padding: 0 10px;
@@ -92,7 +104,7 @@ body{
 /* curve outside in navigation */
 
 .navigation ul li:hover a::before,
-.navigation ul li.hovered a::before{
+.navigation ul li.hovered a::before {
     content: '';
     position: absolute;
     right: 0;
@@ -104,8 +116,9 @@ body{
     box-shadow: 35px 35px 0 10px var(--white);
     pointer-events: none;
 }
+
 .navigation ul li:hover a::after,
-.navigation ul li.hovered a::after{
+.navigation ul li.hovered a::after {
     content: '';
     position: absolute;
     right: 0;
@@ -119,7 +132,7 @@ body{
 }
 
 /* main */
-.main{
+.main {
     position: absolute;
     width: calc(100% - 300px);
     left: 300px;
@@ -127,11 +140,13 @@ body{
     background: var(--white);
     transition: 0.5s;
 }
-.main.active{
+
+.main.active {
     width: calc(100% - 72px);
     left: 72px;
 }
-.topbar{
+
+.topbar {
     width: 100%;
     height: 60px;
     display: flex;
@@ -139,26 +154,30 @@ body{
     align-items: center;
     padding: 0 10px;
 }
-.toggle{
+
+.toggle {
     position: relative;
     width: 60px;
     height: 60px;
     display: flex;
     justify-content: center;
-    align-items:  center;
+    align-items: center;
     font-size: 2.5em;
     cursor: pointer;
 }
-.search{
+
+.search {
     position: relative;
     width: 400px;
     margin: 0 10px;
 }
-.search label{
+
+.search label {
     position: relative;
     width: 100%;
 }
-.search label input{
+
+.search label input {
     width: 100%;
     height: 40px;
     border-radius: 40px;
@@ -168,13 +187,15 @@ body{
     outline: none;
     border: 1px solid var(--black2);
 }
-.search label ion-icon{
+
+.search label ion-icon {
     position: absolute;
     top: 0;
     left: 10px;
     font-size: 1.2em;
 }
-.user{
+
+.user {
     position: relative;
     width: 40px;
     height: 40px;
@@ -182,15 +203,17 @@ body{
     overflow: hidden;
     cursor: pointer;
 }
-.user img{
+
+.user img {
     position: absolute;
     top: 0;
     left: -10px;
     width: 145%;
     height: 100%;
-    object-fit:contain;
+    object-fit: contain;
 }
-.cardBox{
+
+.cardBox {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -198,7 +221,8 @@ body{
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
 }
-.cardBox .card{
+
+.cardBox .card {
     position: relative;
     background: var(--white);
     padding: 30px;
@@ -208,33 +232,38 @@ body{
     cursor: pointer;
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.1);
 }
-.cardBox .card .numbers{
+
+.cardBox .card .numbers {
     position: relative;
     font-weight: 500;
     font-size: 2em;
     color: var(--red1);
 }
-.cardBox .card .cardName{
+
+.cardBox .card .cardName {
     color: var(--black2);
     font-size: 1.1em;
     margin-top: 5px;
 }
-.cardBox .card .iconBx{
+
+.cardBox .card .iconBx {
     font-size: 2.1em;
     color: var(--black2);
 }
-.cardBox .card:hover{
+
+.cardBox .card:hover {
     background: var(--red1);
 }
+
 .cardBox .card:hover .numbers,
 .cardBox .card:hover .cardName,
-.cardBox .card:hover .iconBx{
+.cardBox .card:hover .iconBx {
     color: var(--white);
 }
 
 
 /* chart css */
-.graphBox{
+.graphBox {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -243,7 +272,8 @@ body{
     grid-gap: 30px;
     min-height: 200px;
 }
-.graphBox .box{
+
+.graphBox .box {
     position: relative;
     background: #fff;
     padding-right: 10px;
@@ -252,16 +282,18 @@ body{
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
 }
-#piechart_3d{
+
+#piechart_3d {
     margin: 2px auto;
     width: 100%;
 }
-.barGraph{
+
+.barGraph {
     width: 100%;
 }
 
 
-.details{
+.details {
     position: relative;
     width: 100%;
     padding: 20px;
@@ -270,7 +302,8 @@ body{
     grid-gap: 30px;
     /* margin-top: 10px; */
 }
-.details .recentOrders{
+
+.details .recentOrders {
     position: relative;
     display: grid;
     min-height: 500px;
@@ -279,16 +312,19 @@ body{
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
 }
-.cardHeader{
+
+.cardHeader {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
-.cardHeader h2{
+
+.cardHeader h2 {
     font-weight: 600;
     color: var(--red1);
 }
-.btn{
+
+.btn {
     position: relative;
     padding: 5px 10px;
     background: var(--red1);
@@ -296,38 +332,48 @@ body{
     color: var(--white);
     border-radius: 6px;
 }
-.details table{
+
+.details table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
-.details table thead td{
+
+.details table thead td {
     font-weight: 600;
 }
-.details .recentOrders table tr{
+
+.details .recentOrders table tr {
     color: var(--black1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-.details .recentOrders table tr:last-child{
+
+.details .recentOrders table tr:last-child {
     border-bottom: none;
 }
-.details .recentOrders table tbody tr:hover{
+
+.details .recentOrders table tbody tr:hover {
     background: var(--red1);
     color: var(--white);
 }
-.details .recentOrders table tr td{
+
+.details .recentOrders table tr td {
     padding: 10px;
 }
-.details .recentOrders table tr td:last-child{
+
+.details .recentOrders table tr td:last-child {
     text-align: end;
 }
-.details .recentOrders table tr td:nth-child(2){
+
+.details .recentOrders table tr td:nth-child(2) {
     text-align: end;
 }
-.details .recentOrders table tr td:nth-child(3){
+
+.details .recentOrders table tr td:nth-child(3) {
     text-align: center;
 }
-.status.delivered{
+
+.status.delivered {
     padding: 2px 4px;
     background: #09a011;
     color: var(--white);
@@ -335,7 +381,8 @@ body{
     font-size: 14px;
     font-weight: 500;
 }
-.status.pending{
+
+.status.pending {
     padding: 2px 4px;
     background: #f9ca3f;
     color: var(--white);
@@ -343,7 +390,8 @@ body{
     font-size: 14px;
     font-weight: 500;
 }
-.status.return{
+
+.status.return {
     padding: 2px 4px;
     background: #f00;
     color: var(--white);
@@ -351,7 +399,8 @@ body{
     font-size: 14px;
     font-weight: 500;
 }
-.recentCustomers{
+
+.recentCustomers {
     position: relative;
     display: grid;
     min-height: 500px;
@@ -360,44 +409,53 @@ body{
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
     border-radius: 20px;
 }
-.recentCustomers .imgBx{
+
+.recentCustomers .imgBx {
     position: relative;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     overflow: hidden;
 }
-.recentCustomers .imgBx img{
+
+.recentCustomers .imgBx img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit: cover;
 }
-.recentCustomers table tr td{
+
+.recentCustomers table tr td {
     padding: 12px 10px;
 }
-.recentCustomers table tr td h4{
+
+.recentCustomers table tr td h4 {
     font-size: 16px;
     font-weight: 500;
     line-height: 1.2em;
 }
-.recentCustomers table tr td h4 span{
+
+.recentCustomers table tr td h4 span {
     font-size: 14px;
     color: var(--black2);
 }
-.recentCustomers table tr:hover{
+
+.recentCustomers table tr:hover {
     background: var(--red1);
     color: var(--white);
 }
-.recentCustomers table tr:hover td h4 span{
+
+.recentCustomers table tr:hover td h4 span {
     color: var(--white);
 }
-.recentCustomers .add{
+
+.recentCustomers .add {
     margin-top: 40px;
 }
-.recentCustomers .add button{
+
+.recentCustomers .add button {
     background-color: var(--red1);
     border: 0px;
     padding: 20px;
@@ -406,7 +464,8 @@ body{
     color: white;
     font-size: large;
 }
-.recentCustomers .add button:hover{
+
+.recentCustomers .add button:hover {
     background-color: var(--white);
     color: var(--red1);
     cursor: pointer;
@@ -418,7 +477,7 @@ body{
 
 
 /* button */
-.add button{
+.add button {
     display: block;
     margin: auto;
     margin-bottom: 20px;

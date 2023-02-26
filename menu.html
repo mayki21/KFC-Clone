@@ -20,7 +20,7 @@
             <div id="rightNav">
                 <h3 onclick="location.href='login.html'" id="signInBtn">Sign In</h3>
                 <h3 style="color: gray; font-size: 30px;">|</h3>
-                <h3 id="totalAmount">₹0</h3> 
+                <h3 id="totalAmount">₹0</h3>
                 <img src="images\cartBucket.jpg" alt="" onclick="location.href='cart.html';">
             </div>
         </nav>
@@ -83,60 +83,60 @@
                     <h2><a name="beverages">BEVERAGES</a></h2>
                     <div id="Beverage"></div>
                 </div>
-    
+
             </div>
         </div>
     </div>
-   
+
 
 
     <!-- Footer Starts -->
-<footer>
-    <div id="Tfooter">
-        <div id="rfooter">
-            <img src="images\BFC Buckets.jpg" alt="">
+    <footer>
+        <div id="Tfooter">
+            <div id="rfooter">
+                <img src="images\BFC Buckets.jpg" alt="">
+            </div>
+            <div id="linksF">
+                <div class="linkCard">
+                    <a href="">BFC Foods</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="">Order Lookup</a>
+                    <a href="">Gift Card</a>
+                    <a href="">Nutrition & Allergen</a>
+                </div>
+                <div class="linkCard">
+                    <a href="">Support</a>
+                    <a href="">Get Help</a>
+                    <a href="">Contact Us</a>
+                    <a href="">BFC Feedback</a>
+                    <a href="">Privacy Policy</a>
+                </div>
+                <div class="linkCard">
+                    <a href="">Legal</a>
+                    <a href="">Terms and Conditions</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Disclaimer</a>
+                    <a href="">Caution Notice</a>
+                </div>
+                <div class="linkCard">
+                    <a href="">BFC India</a>
+                    <a href="">About BFC</a>
+                    <a href="">BFC Care</a>
+                    <a href="">Careers</a>
+                    <a href="">Our Golden Past</a>
+                </div>
+            </div>
+            <div id="app">
+                <img src="images\playstore.jpg" alt="">
+                <img src="images\appstore.jpg" alt="">
+            </div>
         </div>
-        <div id="linksF">
-            <div class="linkCard">
-                <a href="">BFC Foods</a>
-                <a href="menu.html">Menu</a>
-                <a href="">Order Lookup</a>
-                <a href="">Gift Card</a>
-                <a href="">Nutrition & Allergen</a>
-            </div>
-            <div class="linkCard">
-                <a href="">Support</a>
-                <a href="">Get Help</a>
-                <a href="">Contact Us</a>
-                <a href="">BFC Feedback</a>
-                <a href="">Privacy Policy</a>
-            </div>
-            <div class="linkCard">
-                <a href="">Legal</a>
-                <a href="">Terms and Conditions</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Disclaimer</a>
-                <a href="">Caution Notice</a>
-            </div>
-            <div class="linkCard">
-                <a href="">BFC India</a>
-                <a href="">About BFC</a>
-                <a href="">BFC Care</a>
-                <a href="">Careers</a>
-                <a href="">Our Golden Past</a>
-            </div>
+        <div id="Dfooter">
+            <p>Copyright © KFC Corporation 2021 All Rights Reserved</p>
         </div>
-        <div id="app">
-            <img src="images\playstore.jpg" alt="">
-            <img src="images\appstore.jpg" alt="">
-        </div>
-    </div>
-    <div id="Dfooter">
-        <p>Copyright © KFC Corporation 2021 All Rights Reserved</p>
-    </div>
-</footer>
+    </footer>
 
-    
+
 
 </body>
 <script>
@@ -148,15 +148,15 @@
     let snacksContainer = document.getElementById("Snack");
     let beveragesContainer = document.getElementById("Beverage");
 
-    let API ="http://localhost:3000/recipes";
-    let arr=[];
+    let API = "http://localhost:3000/recipes";
+    let arr = [];
     async function FetchData() {
         try {
             let request = await fetch(API);
             let data = await request.json();
 
 
-            arr=data
+            arr = data
             console.log(data);
             DisplayProduct(data)
         } catch (err) {
@@ -167,7 +167,7 @@
     let CartArr = JSON.parse(localStorage.getItem("cart")) || [];
 
     function DisplayProduct(data) {
-        
+
 
         chickenBucketContainer.innerHTML = "";
         biryaniBucketContainer.innerHTML = "";
@@ -176,7 +176,7 @@
         stayHomeSpecialsContainer.innerHTML = "";
         snacksContainer.innerHTML = "";
         beveragesContainer.innerHTML = "";
-        
+
 
         data.forEach((product) => {
 
@@ -240,102 +240,102 @@
         }
         return false;
     }
-    let Total=document.getElementById("totalAmount");
-    let sum=0;
-        for (let x = 0; x < CartArr.length;x++){
-            sum+=CartArr[x].price;
-        }
+    let Total = document.getElementById("totalAmount");
+    let sum = 0;
+    for (let x = 0; x < CartArr.length; x++) {
+        sum += CartArr[x].price;
+    }
 
-    Total.innerText=`₹${sum}`
-   //Search Function
-   let MainC=document.getElementById("chicken_bucket");
-   let MainBir = document.getElementById("biryani_bucket")
-   let MainBox = document.getElementById("box_meals")
-   let MainBurger = document.getElementById("burgers")
-   let MainSna = document.getElementById("snacks")
-   let MainStay = document.getElementById("stay_home_specials")
-   let MainBev = document.getElementById("beverages")
-
-
-     let Display = document.getElementById("SearchedItem");
-        let search = document.getElementById("main_searched_item")
-        search.addEventListener("keypress", (e) => {
-            if (e.key === "Enter") {
-
-                MainC.innerHTML="";
-                MainBir.innerHTML="";
-                MainBox.innerHTML="";
-                MainBurger.innerHTML="";
-                MainSna.innerHTML="";
-                MainStay.innerHTML="";
-                MainBev.innerHTML="";
+    Total.innerText = `₹${sum}`
+    //Search Function
+    let MainC = document.getElementById("chicken_bucket");
+    let MainBir = document.getElementById("biryani_bucket")
+    let MainBox = document.getElementById("box_meals")
+    let MainBurger = document.getElementById("burgers")
+    let MainSna = document.getElementById("snacks")
+    let MainStay = document.getElementById("stay_home_specials")
+    let MainBev = document.getElementById("beverages")
 
 
+    let Display = document.getElementById("SearchedItem");
+    let search = document.getElementById("main_searched_item")
+    search.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+
+            MainC.innerHTML = "";
+            MainBir.innerHTML = "";
+            MainBox.innerHTML = "";
+            MainBurger.innerHTML = "";
+            MainSna.innerHTML = "";
+            MainStay.innerHTML = "";
+            MainBev.innerHTML = "";
 
 
 
 
-                Display.innerHTML = "";
-                chickenBucketContainer.innerHTML = "";
-                biryaniBucketContainer.innerHTML = "";
-                boxMealsContainer.innerHTML = "";
-                burgersContainer.innerHTML = "";
-                stayHomeSpecialsContainer.innerHTML = "";
-                snacksContainer.innerHTML = "";
-                beveragesContainer.innerHTML = "";
-                
-
-                let searchItem = search.value;
-                console.log(searchItem)
 
 
-                 let filtered = arr.filter((element) => {
-                    if (
-                        element.name.toUpperCase().includes(searchItem.toUpperCase()) ===
-                        true
-                    ) {
-                        return true;
+            Display.innerHTML = "";
+            chickenBucketContainer.innerHTML = "";
+            biryaniBucketContainer.innerHTML = "";
+            boxMealsContainer.innerHTML = "";
+            burgersContainer.innerHTML = "";
+            stayHomeSpecialsContainer.innerHTML = "";
+            snacksContainer.innerHTML = "";
+            beveragesContainer.innerHTML = "";
+
+
+            let searchItem = search.value;
+            console.log(searchItem)
+
+
+            let filtered = arr.filter((element) => {
+                if (
+                    element.name.toUpperCase().includes(searchItem.toUpperCase()) ===
+                    true
+                ) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+            filtered.forEach((product) => {
+
+                let card = document.createElement("div");
+                let image = document.createElement("img");
+                let name = document.createElement("h3");
+                let category = document.createElement("p");
+                let details = document.createElement("p");
+                let price = document.createElement("h4");
+                let type = document.createElement("h4");
+                let addToCartButton = document.createElement("button");
+
+
+                type.textContent = product.type;
+                image.src = product.image;
+                name.textContent = product.name;
+                category.textContent = product.category;
+                price.textContent = `₹${product.price}`;
+                details.textContent = product.description;
+                addToCartButton.textContent = "Add to Cart";
+
+                addToCartButton.addEventListener("click", () => {
+                    if (check(product)) {
+                        alert("Product Already in Cart");
                     } else {
-                        return false;
+                        CartArr.push({ ...product, quantity: 1 });
+                        localStorage.setItem("cart", JSON.stringify(CartArr));
+                        alert("Product Added To Cart");
                     }
                 });
-                 filtered.forEach((product) => {
 
-                    let card = document.createElement("div");
-                    let image = document.createElement("img");
-                    let name = document.createElement("h3");
-                    let category = document.createElement("p");
-                    let details = document.createElement("p");
-                    let price = document.createElement("h4");
-                    let type = document.createElement("h4");
-                    let addToCartButton = document.createElement("button");
+                card.append(image, type, name, price, details, category, addToCartButton);
+                Display.append(card)
+            });
 
+        }
 
-                    type.textContent = product.type;
-                    image.src = product.image;
-                    name.textContent = product.name;
-                    category.textContent = product.category;
-                    price.textContent = `₹${product.price}`;
-                    details.textContent = product.description;
-                    addToCartButton.textContent = "Add to Cart";
-
-                    addToCartButton.addEventListener("click", () => {
-                        if (check(product)) {
-                            alert("Product Already in Cart");
-                        } else {
-                            CartArr.push({ ...product, quantity: 1 });
-                            localStorage.setItem("cart", JSON.stringify(CartArr));
-                            alert("Product Added To Cart");
-                        }
-                    });
-
-                    card.append(image, type, name, price, details, category, addToCartButton);
-                    Display.append(card)
-                });
-                
-            }
-
-        });
+    });
 
 </script>
 
