@@ -5,6 +5,7 @@ let btn = document.querySelector(".addBtn");
 let totalsales = document.querySelector("#totalsales");
 let totalEarning = document.querySelector("#totalEarning");
 let deltbody = document.querySelector("#delBoyTable tbody");
+let signoutbutton = document.querySelector("#signoutbutton");
 
 let orderArr = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -117,3 +118,8 @@ function bargraphdata() {
     console.log(storeArr);
     localStorage.setItem("barChartData", JSON.stringify(storeArr));
 }
+
+
+signoutbutton.addEventListener("click", ()=>{
+    window.location.assign("/login.html")
+})

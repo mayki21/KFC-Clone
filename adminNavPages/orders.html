@@ -32,6 +32,11 @@
     .search input {
       margin-right: 10px;
     }
+
+    #productimage{
+      width: 40px;
+      margin-left: 50px;
+    }
   </style>
 </head>
 
@@ -76,6 +81,7 @@
 
           <tbody>
             <!-- add row -->
+            
 
           </tbody>
         </table>
@@ -95,7 +101,7 @@
     let str = "";
     getOrderArr.forEach((el)=>{
       str  += `<tr>
-              <td><img href="${el.image}"></td>
+              <td><img id="productimage" src="${el.image}" alt=""></td>
               <td>${el.name}</td>
               <td>${el.price}</td>
               <td>${el.category}</td>

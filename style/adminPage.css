@@ -487,7 +487,21 @@ body {
     text-decoration: none;
     color: white;
 }
-.add button:hover,
-.add button a:hover{
+.add button a:hover,
+.add button:hover{
     color: red;
+}
+
+#logoWebsite{
+    width: 70px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#signoutbutton{
+    border: none;
+    font-size: 15px;
+    background:none;
+    color: var(--red1);
+    font-weight: bolder;
 }

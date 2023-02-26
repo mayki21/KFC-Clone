@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <!-- // automatic reload of page -->
     <meta http-equiv="refresh" content="300">           
     <link rel="icon" type="image/x-icon" href="images\bfccc.jpg">
@@ -106,9 +106,8 @@
         <div class="navigation">
             <ul>
                 <li>
-                    <a href="#">
-                        <!-- <span class="icon"><ion-icon name="logo-apple"></ion-icon></span> -->
-                        <!-- <span class="title"><img src="/images/bfccc.jpg" alt=""></span> -->
+                    <a href="/index.html">
+                        <span class="title"><img id="logoWebsite" src="/images/bfccc.jpg" alt=""></span>
                     </a>
                 </li>
                 <li>
@@ -124,23 +123,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="list-circle-outline"></ion-icon></span>
-                        <span class="title">Stock and Inventory</span>
-                    </a>
-                </li>
-                <li>
                     <a href="./adminNavPages/orders.html">
                         <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
                         <span class="title">Orders</span>
                     </a>
                 </li>
-                <li>
-                    <a href="./adminNavPages/giftPage.html">
-                        <span class="icon"><ion-icon name="gift-outline"></ion-icon></span>
-                        <span class="title">Gift Cards</span>
-                    </a>
-                </li> 
+                
                 <li>
                     <a href="#">
                         <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
@@ -164,6 +152,8 @@
                         <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
+
+                <button id="signoutbutton">Sign out</button>
                 <!-- userImg -->
                 <div class="user">
                     <img src="PHT.jpg" alt="">
@@ -183,7 +173,7 @@
                 </div>
                 <div class="card" id="sales">
                     <div>
-                        <div class="numbers" id="totalsales">80</div>
+                        <div class="numbers" id="totalsales"></div>
                         <div class="cardName">Sales</div>
                     </div>
                     <div class="iconBx">
@@ -201,7 +191,7 @@
                 </div>
                 <div class="card" id="Earning">
                     <div>
-                        <div class="numbers" id="totalEarning">$56,700</div>
+                        <div class="numbers" id="totalEarning"></div>
                         <div class="cardName">Profit</div>
                     </div>
                     <div class="iconBx">
