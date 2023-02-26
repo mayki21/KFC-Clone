@@ -276,7 +276,24 @@
       "createdAt": 1670165980569
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "firstname": "rahul",
+      "lasttname": "raman",
+      "email": "rahul@gmail.com",
+      "pass": "1234",
+      "confirm": "1234",
+      "id": 1
+    },
+    {
+      "firstname": "mayank",
+      "lasttname": "kumar",
+      "email": "mayank@gmail.com",
+      "pass": "1234",
+      "confirm": "1234",
+      "id": 2
+    }
+  ],
   "comments": [],
   "photos": [],
   "todos": [],

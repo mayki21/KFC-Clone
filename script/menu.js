@@ -77,8 +77,6 @@ function DisplayProduct(data) {
             boxMealsContainer.append(card);
         } else if (product.category === "burgers") {
             burgersContainer.append(card);
-        } else if (product.category === "stay home specials") {
-            stayHomeSpecialsContainer.append(card);
         } else if (product.category === "desserts") {
             snacksContainer.append(card);
         } else if (product.category === "beverages") {
