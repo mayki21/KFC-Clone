@@ -8,46 +8,53 @@ body {
     font-family: Arial, Helvetica, sans-serif
 }
 
-header{
+header {
     top: 0;
     position: sticky;
     background-color: white;
     z-index: 1;
 }
-nav{
+
+nav {
     display: flex;
     height: 100px;
     padding: 0px 75px;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
-#leftNav{
+
+#leftNav {
     display: flex;
     align-items: center;
     width: 20%;
     justify-content: space-between;
-    
+
 }
-#leftNav>img{
+
+#leftNav>img {
     height: 50%;
 }
-nav>#leftNav>h3:hover{
+
+nav>#leftNav>h3:hover {
     cursor: pointer;
 }
-#rightNav{
+
+#rightNav {
     display: flex;
     align-items: center;
     width: 15%;
     justify-content: space-between;
 }
-#rightNav>img{
+
+#rightNav>img {
     height: 50%;
 }
-nav>#rightNav>h3:hover{
+
+nav>#rightNav>h3:hover {
     cursor: pointer;
 }
 
-#title{
+#title {
     width: 80%;
     margin: auto;
     padding-bottom: 2%;
@@ -55,7 +62,7 @@ nav>#rightNav>h3:hover{
 
 /* cartbody */
 
-#container{
+#container {
     width: 90%;
     margin: auto;
     height: max-content;
@@ -63,60 +70,65 @@ nav>#rightNav>h3:hover{
     justify-content: space-around;
 }
 
-#ItemList{
+#ItemList {
     width: 55%;
 }
 
-#checkoutBox{
+#checkoutBox {
     width: 30%;
     height: fit-content;
     padding: 2%;
-    margin-top: 10%;
+    margin-top: 50px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-#subtotal{
+
+#subtotal {
     display: flex;
     justify-content: space-between;
     margin: 10% 0%;
 }
-#GST{
+
+#GST {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin: 10% 0%;
 }
-#checkoutBox>button{
+
+#checkoutBox>button {
     width: 100%;
     padding: 5%;
-    margin:auto;
+    margin: auto;
     display: flex;
     background-color: #e4002b;
-    color: #DBDBDB;
+    color: white;
     border: none;
     border-radius: 20px;
     font-weight: bold;
     justify-content: space-around;
 }
-.cartcard{
+
+.cartcard {
     background-color: #f8f7f5;
     padding: 2%;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    margin: 20px ;
+    margin: 20px;
 }
 
-.detailsSec{
+.detailsSec {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 10px ;
+    margin: 10px;
 }
-.detailsSec>img{
+
+.detailsSec>img {
     width: 25%;
     border-radius: 5px;
 }
 
-.quantityBtn{
+.quantityBtn {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -124,13 +136,13 @@ nav>#rightNav>h3:hover{
     font-size: 20px;
 }
 
-.quantityBtn:hover{
-    background-color: #dbdbdb ;
+.quantityBtn:hover {
+    background-color: #dbdbdb;
     color: #e4002b;
     font-weight: bolder;
 }
 
-.quantityBlock{
+.quantityBlock {
     width: 30px;
     height: 30px;
     display: flex;
@@ -138,72 +150,84 @@ nav>#rightNav>h3:hover{
     justify-content: center;
 }
 
-.quantitySec{
+.quantitySec {
     display: flex;
     margin: 2% 7%;
 }
 
-.removebtn{
+.removebtn {
     width: 20%;
     margin-left: 60%;
     background-color: #e4002b;
-    color: #DBDBDB;
+    color: white;
     border: none;
     border-radius: 20px;
     font-weight: bold;
 }
-.removebtn:hover{
-    background-color: #dbdbdb ;
+
+.removebtn:hover {
+    background-color: #dbdbdb;
     color: #e4002b;
 }
+
 /* footerPart */
 
-footer{
+footer {
     width: 100%;
     background-color: #202124;
     padding: 100px 100px 10px 100px;
 }
-#rfooter{
+
+#rfooter {
     display: flex;
     width: 20%;
     justify-content: center;
     padding: 20px 50px;
 }
-#rfooter>img{
+
+#rfooter>img {
     width: 3em;
     height: 3em;
 }
-#Tfooter{
+
+#Tfooter {
     display: flex;
 }
-#linksF{
+
+#linksF {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 60%;
 }
-.linkCard{
+
+.linkCard {
     display: flex;
     flex-direction: column;
 }
-.linkCard>a{
+
+.linkCard>a {
     text-decoration: none;
     color: #E3E3E3;
     font-weight: 100;
     margin: 5px;
 }
-.linkCard>a:hover{
+
+.linkCard>a:hover {
     font-weight: 600;
 }
-#app{
+
+#app {
     display: flex;
     width: 20%;
     justify-content: space-around
 }
-#app>img{
+
+#app>img {
     width: 100px;
     height: 50px;
 }
-#Dfooter{
+
+#Dfooter {
     height: 50px;
     color: #DBDBDB;
     font-size: 12px;
@@ -213,6 +237,4 @@ footer{
     justify-content: center;
 }
 
-@media only screen and (min-width:0px) and (max-width:1024px) {
-    
-}
+@media only screen and (min-width:0px) and (max-width:1024px) {}

@@ -1,41 +1,49 @@
-header{
+header {
     top: 0;
     position: sticky;
     background-color: white;
     z-index: 1;
 }
-nav{
+
+nav {
     display: flex;
     height: 100px;
     padding: 0px 75px;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
-#leftNav{
+
+#leftNav {
     display: flex;
     align-items: center;
     width: 20%;
     justify-content: space-between;
-    
+
 }
-#leftNav>img{
+
+#leftNav>img {
     height: 50%;
 }
-nav>#leftNav>h3:hover{
+
+nav>#leftNav>h3:hover {
     cursor: pointer;
 }
-#rightNav{
+
+#rightNav {
     display: flex;
     align-items: center;
     width: 15%;
     justify-content: space-between;
 }
-#rightNav>img{
+
+#rightNav>img {
     height: 50%;
 }
-nav>#rightNav>h3:hover{
+
+nav>#rightNav>h3:hover {
     cursor: pointer;
 }
+
 body {
     font-family: sans-serif;
     margin: 0%;
@@ -89,7 +97,8 @@ body {
     height: 1px;
     background-color: black;
 }
-#scroll{
+
+#scroll {
     width: 80%;
     aspect-ratio: 100/1;
     padding: 40px 40px;
@@ -98,9 +107,11 @@ body {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 1px;
 }
+
 #main_search-bar {
     width: 200px;
     height: 30px;
@@ -125,6 +136,7 @@ body {
     font-size: 12px;
     font-weight: bold;
 }
+
 .right-menu-section button {
     /*Change here*/
     width: 60%;
@@ -136,14 +148,247 @@ body {
     cursor: pointer;
     border: 1px solid red;
 }
-    
+
 .right-menu-section button:hover {
     font-size: 20px;
     border: 1px solid rgba(32, 33, 36, .6509803921568628);
     background-color: rgba(32, 33, 36, .6509803921568628);
 }
+
 /* Bucket CSS Starts From Here */
 
+
+#Chick_bucket {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-right: 85px;
+}
+
+#Chick_bucket>div {
+    width: 400px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#Chick_bucket h3 {
+    padding-left: 6%;
+}
+
+#Chick_bucket h4 {
+    padding-left: 6%;
+}
+
+#Chick_bucket p {
+    padding-left: 6%;
+}
+
+
+#Chick_bucket img {
+    width: 400px;
+    padding-left: 0%;
+}
+
+#Biryani_bucket {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1%;
+    margin-right: 85px;
+}
+
+#Biryani_bucket>div {
+    width: 100%;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#Biryani_bucket h3 {
+    padding-left: 6%;
+}
+
+#Biryani_bucket h4 {
+    padding-left: 6%;
+}
+
+#Biryani_bucket p {
+    padding-left: 6%;
+}
+
+
+#Biryani_bucket img {
+    width: 400px;
+    padding-left: 0%;
+}
+
+#Box_Meal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-right: 85px;
+}
+
+#Box_Meal>div {
+    width: 400px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#Box_Meal h3,
+h4 {
+    padding-left: 6%;
+}
+
+#Box_Meal p {
+    padding-left: 6%;
+}
+
+.description {
+    height: 50px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#Box_Meal img {
+    width: 400px;
+    padding-left: 0%;
+}
+
+#Burger {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-right: 85px;
+}
+
+#Burger>div {
+    width: 400px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#Burger h3 {
+    padding-left: 6%;
+}
+
+#Burger p {
+    padding-left: 6%;
+}
+
+.description {
+    height: 50px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#Burger img {
+    width: 400px;
+    padding-left: 0%;
+}
+
+#Stay {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-right: 85px;
+}
+
+#Stay>div {
+    width: 400px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Stay h3 {
+    padding-left: 6%;
+}
+
+#Stay p {
+    padding-left: 6%;
+}
+
+.description {
+    height: 50px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#Stay img {
+    width: 400px;
+    padding-left: 0%;
+}
+
+#Snack {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-right: 85px;
+}
+
+#Snack>div {
+    width: 400px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Snack h3 {
+    padding-left: 6%;
+}
+
+#Snack p {
+    padding-left: 6%;
+}
+
+
+
+#Snack img {
+    width: 400px;
+    padding-left: 0%;
+}
+
+#Beverage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-right: 85px;
+}
+
+#Beverage>div {
+    width: 400px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#Beverage h3 {
+    padding-left: 6%;
+}
+
+#Beverage p {
+    padding-left: 6%;
+}
+
+#Beverage img {
+    width: 400px;
+    padding-left: 0%;
+}
+=======
  #Chick_bucket {
      display: grid;
      grid-template-columns: repeat(3, 1fr);
@@ -358,6 +603,7 @@ body {
 
 
 
+
 /* Footer CSS Starts From Here */
 
 footer {
@@ -427,12 +673,13 @@ footer {
 }
 
 /* SearchedItem CSS Starts From Here */
-#SearchedItem{
+#SearchedItem {
     display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 30px;
-        margin-right: 85px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-right: 85px;
 }
+
 #SearchedItem>div {
     width: 400px;
     padding-bottom: 25px;

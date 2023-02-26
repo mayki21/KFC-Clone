@@ -1,273 +1,283 @@
-
 * {
- box-sizing: border-box;
- margin: 0;
- padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
- font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
- width: 100%;
- position: sticky;
- top: 0;
- background-color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
 
 nav {
- display: flex;
- width: 85%;
- margin: auto;
- padding-bottom: 25px;
+    display: flex;
+    width: 85%;
+    margin: auto;
+    padding-bottom: 25px;
 }
 
 .box15 {
- width: 50%;
- display: flex;
- /* justify-content: space-around; */
- margin-right: 17%;
- margin-left: 10%;
+    width: 50%;
+    display: flex;
+    /* justify-content: space-around; */
+    margin-right: 17%;
+    margin-left: 10%;
 }
 
 .box25 {
- width: 33%;
- display: flex;
- justify-content: space-around;
+    width: 33%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .img_align {
- vertical-align: top;
- height: 25px;
- margin-top: -4px;
+    vertical-align: top;
+    height: 25px;
+    margin-top: -4px;
 }
 
 .box1_5>a {
- text-decoration: none;
- vertical-align: top;
- font-family: sans-serif;
- padding-top: 15px;
- margin-top: 0px;
- font-size: 15px;
- color: black;
- font-weight: bold;
+    text-decoration: none;
+    vertical-align: top;
+    font-family: sans-serif;
+    padding-top: 15px;
+    margin-top: 0px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
 
 }
 
 .box1_5>a:hover {
- text-decoration: underline;
+    text-decoration: underline;
 }
 
 .box2_5>button:hover {
- background-color: #d40d31;
+    background-color: #d40d31;
 }
 
 .btn-class {
- padding: 12px 42px;
- border-radius: 25px;
- border: 0px;
- background-color: #E4002B;
- color: white;
- font-size: 15px;
- font-family: sans-serif;
- font-weight: bold;
- cursor: pointer;
+    padding: 12px 42px;
+    border-radius: 25px;
+    border: 0px;
+    background-color: #E4002B;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .fas_size {
- margin: 5px 0px;
- width: 55px;
- cursor: pointer;
+    margin: 5px 0px;
+    width: 55px;
+    cursor: pointer;
 }
 
 .icon-border {
- border-right: 1px solid silver;
- height: 30px;
+    border-right: 1px solid silver;
+    height: 30px;
 
 }
 
 .nav-bottom {
- display: flex;
- background-color: #202124;
- color: white;
- justify-content: center;
- height: 44px;
- cursor: pointer;
+    display: flex;
+    background-color: #202124;
+    color: white;
+    justify-content: center;
+    height: 44px;
+    cursor: pointer;
 }
 
 .nav-bottom:hover {
- background-color: #303133;
+    background-color: #303133;
 }
 
 .nav-bottom>.para {
- margin-top: 12px;
- font-family: sans-serif;
- font-size: 14px;
+    margin-top: 12px;
+    font-family: sans-serif;
+    font-size: 14px;
 }
 
 .nav-bottom>.location {
- width: 20px;
- margin-top: 9px;
- color: #E4002B;
+    width: 20px;
+    margin-top: 9px;
+    color: #E4002B;
 }
 
 .nav-top {
- width: 85%;
- height: 28px;
- margin: auto;
+    width: 85%;
+    height: 28px;
+    margin: auto;
 }
 
 .nav-top>img {
- margin-left: 1.65%;
+    margin-left: 1.65%;
 }
 
 #mobile_nav {
- display: none;
+    display: none;
 }
 
 .nav-bottom>a {
- display: none;
+    display: none;
 }
 
 
 
 #container1 {
- width: 100%;
- /* height: 700px; */
- display: flex;
- /* background-color: black; */
+    width: 100%;
+    /* height: 700px; */
+    display: flex;
+    /* background-color: black; */
 
 }
 
 #box1 {
- width: 55%;
- height: 90%;
- /* background-color: blanchedalmond; */
- margin: -4px
+    width: 55%;
+    height: 90%;
+    /* background-color: blanchedalmond; */
+    margin: -4px
 }
 
 #box2 {
- width: 35%;
- height: 90%;
- /* background-color: blanchedalmond; */
- margin: 5% 5%;
+    width: 35%;
+    height: 90%;
+    /* background-color: blanchedalmond; */
+    margin: 5% 5%;
 }
 
 img {
- width: 100%;
+    width: 100%;
 }
 
 #box2_1 {
- width: 70%;
- height: 80%;
- /* background-color: blue; */
- margin: 1%;
+    width: 70%;
+    height: 80%;
+    /* background-color: blue; */
+    margin: 1%;
 
 }
 
 #box2_1>div {
- font-size: 2.5rem;
- line-height: 3.3rem;
- font-weight: bold;
- font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    line-height: 3.3rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 input {
- width: 85%;
- margin-top: 50px;
- height: 50px;
- border: none;
- font-size: larger;
- font-weight: bold;
- outline: none;
+    width: 85%;
+    margin-top: 50px;
+    height: 50px;
+    border: none;
+    font-size: larger;
+    font-weight: bold;
+    outline: none;
 }
 
 #submitbutton {
- width: 82%;
- height: 50px;
- border-radius: 25px;
- background-color: black;
- text-align: center;
- color: white;
- font-weight: bold;
- font-size: larger;
- margin-bottom: 10px;
- border: none;
+    width: 82%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: 10px;
+    border: none;
 }
 
 #box2_1>p {
- font-size: 15px;
+    font-size: 15px;
 }
 
 #forget {
- font-size: x-small;
- width: 10%;
- height: 10%;
- border: none
+    font-size: x-small;
+    width: 10%;
+    height: 10%;
+    border: none
 }
 
 #box2_1>p:nth-child(1) {
- font-size: 1px;
- margin-bottom: 5px;
+    font-size: 1px;
+    margin-bottom: 5px;
 }
 
 #box2_1>p:nth-child(2) {
- font-size: 20px
+    font-size: 20px
 }
 
 a {
- color: black;
+    color: black;
 }
+
 /* bottom panel */
 
 
-footer{
+footer {
     width: 100%;
     background-color: #202124;
     padding: 100px 100px 10px 100px;
 }
-#rfooter{
+
+#rfooter {
     display: flex;
     width: 20%;
     justify-content: center;
     padding: 20px 50px;
 }
-#rfooter>img{
+
+#rfooter>img {
     width: 3em;
     height: 3em;
 }
-#Tfooter{
+
+#Tfooter {
     display: flex;
 }
-#linksF{
+
+#linksF {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 60%;
 }
-.linkCard{
+
+.linkCard {
     display: flex;
     flex-direction: column;
 }
-.linkCard>a{
+
+.linkCard>a {
     text-decoration: none;
     color: #E3E3E3;
     font-weight: 100;
     margin: 5px;
 }
-.linkCard>a:hover{
+
+.linkCard>a:hover {
     font-weight: 600;
 }
-#app{
+
+#app {
     display: flex;
     width: 20%;
     justify-content: space-around
 }
-#app>img{
+
+#app>img {
     width: 100px;
     height: 50px;
 }
-#Dfooter{
+
+#Dfooter {
     height: 50px;
     color: #DBDBDB;
     font-size: 12px;
@@ -277,51 +287,50 @@ footer{
     justify-content: center;
 }
 
- 
-  
-
-        @media only screen and (min-width:0px) and (max-width:1024px) {
-            #boxes2 {
-                flex-direction: column;
-                width: 30%;
-                margin: auto;
-            }
-
-            .cards2 {
-                width: 100%;
-                height: 30px;
-                overflow: hidden;
-                /* text-align: center; */
-            }
-
-            .cards2:nth-child(1) {
-                height: 80px;
-                /* margin-left: -60; */
-
-            }
-
-            i {
-                margin-right: 2px
-            }
-
-            #container1 {
-                flex-direction: column-reverse;
-            }
-
-            #box1 {
-                width: 100%;
-            }
-
-            #box2 {
-                width: 100%;
-            }
 
 
 
+@media only screen and (min-width:0px) and (max-width:1024px) {
+    #boxes2 {
+        flex-direction: column;
+        width: 30%;
+        margin: auto;
+    }
 
-        }
-        #box2_1>input:nth-child(1)
-        {
-            width: 100%;
-        }
-        
+    .cards2 {
+        width: 100%;
+        height: 30px;
+        overflow: hidden;
+        /* text-align: center; */
+    }
+
+    .cards2:nth-child(1) {
+        height: 80px;
+        /* margin-left: -60; */
+
+    }
+
+    i {
+        margin-right: 2px
+    }
+
+    #container1 {
+        flex-direction: column-reverse;
+    }
+
+    #box1 {
+        width: 100%;
+    }
+
+    #box2 {
+        width: 100%;
+    }
+
+
+
+
+}
+
+#box2_1>input:nth-child(1) {
+    width: 100%;
+}

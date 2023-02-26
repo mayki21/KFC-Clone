@@ -259,58 +259,69 @@ td>input {
 td {
     padding: 0;
 }
-#submitbutton:hover{
+
+#submitbutton:hover {
     background-color: black;
 }
 
 /* bottom bar */
 
-footer{
+footer {
     width: 100%;
     background-color: #202124;
     padding: 100px 100px 10px 100px;
 }
-#rfooter{
+
+#rfooter {
     display: flex;
     width: 20%;
     justify-content: center;
     padding: 20px 50px;
 }
-#rfooter>img{
+
+#rfooter>img {
     width: 3em;
     height: 3em;
 }
-#Tfooter{
+
+#Tfooter {
     display: flex;
 }
-#linksF{
+
+#linksF {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     width: 60%;
 }
-.linkCard{
+
+.linkCard {
     display: flex;
     flex-direction: column;
 }
-.linkCard>a{
+
+.linkCard>a {
     text-decoration: none;
     color: #E3E3E3;
     font-weight: 100;
     margin: 5px;
 }
-.linkCard>a:hover{
+
+.linkCard>a:hover {
     font-weight: 600;
 }
-#app{
+
+#app {
     display: flex;
     width: 20%;
     justify-content: space-around
 }
-#app>img{
+
+#app>img {
     width: 100px;
     height: 50px;
 }
-#Dfooter{
+
+#Dfooter {
     height: 50px;
     color: #DBDBDB;
     font-size: 12px;
@@ -337,7 +348,7 @@ footer{
 
     .cards4:nth-child(1) {
         height: 100px;
-       
+
 
     }
 

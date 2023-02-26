@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGNUP</title>
+
     <link rel="icon" type="image/x-icon" href="images\bfccc.jpg">
 
 
     <link rel="stylesheet" href="/style/signinpage.css">
+
 
 </head>
 
@@ -132,6 +134,19 @@
 
 
 
+
+    document.querySelector("form").addEventListener("submit", myFunction)
+
+
+
+    async function myFunction() {
+        try {
+
+
+
+
+
+
     document.querySelector("form").addEventListener("submit", (e)=>{
         e.preventDefault();
         myFunction();
@@ -141,19 +156,30 @@
 
     async function myFunction() {
         try {
+
             let obj = {
                 firstname: document.querySelector("#firstname").value,
                 lasttname: document.querySelector("#lastname").value,
                 email: document.querySelector("#email").value,
                 pass: document.querySelector("#password").value,
-                confirm: document.querySelector("#confirmpassword").value,
+
+
             }
+
+
+
+            }
+
             let register_request = await fetch(`http://localhost:3000/users`, {
                 method: 'POST',
                 headers: {
                     "Content-Type": 'application/json'
                 },
                 body: JSON.stringify(obj)
+
+            })
+
+
             })
             alert("Account Created")
         }
