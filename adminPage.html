@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style\adminPage.css">
+    <link rel="stylesheet" href="/style/adminPage.css">
 
 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -43,12 +43,13 @@
 
     function drawVisualization() {
         // Some raw data (not necessarily accurate)
+        let barArr = JSON.parse(localStorage.getItem("barChartData"))
         var data = google.visualization.arrayToDataTable([
-        ['Month', 'Last Profit', 'Sales',  'Average'],
-        ['October',  165,      938,         614.6],
-        ['November',  157,      1167,         623],
-        ['December',  139,      1110,          609.4],
-        ['January',  136,      691,           569.6]
+        ['Month', 'Last Max', 'Sales',  'Average'],
+        ['October',  barArr[0].lastmax,    barArr[0].totalsale,    barArr[0].monthAvg],
+        ['November',  barArr[1].lastmax,      barArr[1].totalsale,         barArr[1].monthAvg],
+        ['December',  barArr[2].lastmax,      barArr[2].totalsale,          barArr[2].monthAvg],
+        ['January',  barArr[3].lastmax,      barArr[3].totalsale,           barArr[3].monthAvg]
         ]);
 
         var options = {
@@ -90,6 +91,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="list-circle-outline"></ion-icon></span>
+                        <span class="title">Stock and Inventory</span>
+                    </a>
+                </li>
+                <li>
                     <a href="./adminNavPages/orders.html">
                         <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
                         <span class="title">Orders</span>
@@ -100,17 +107,11 @@
                         <span class="icon"><ion-icon name="gift-outline"></ion-icon></span>
                         <span class="title">Gift Cards</span>
                     </a>
-                </li>
+                </li> 
                 <li>
                     <a href="#">
                         <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
                         <span class="title">Settings</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
-                        <span class="title">Sign Out</span>
                     </a>
                 </li>
             </ul>
@@ -138,18 +139,18 @@
 
             <!-- cards -->
             <div class="cardBox">
-                <div class="card">
+                <div class="card" id="del_boy">
                     <div>
-                        <div class="numbers">2500</div>
-                        <div class="cardName">Daily Views</div>
+                        <div class="numbers" id="Avail_del_boy"></div>
+                        <div class="cardName">Delivery Assistant</div>
                     </div>
                     <div class="iconBx">
-                        <ion-icon name="eye-outline"></ion-icon>
+                        <ion-icon name="man-outline"></ion-icon>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="sales">
                     <div>
-                        <div class="numbers">80</div>
+                        <div class="numbers" id="totalsales">80</div>
                         <div class="cardName">Sales</div>
                     </div>
                     <div class="iconBx">
@@ -165,10 +166,10 @@
                         <ion-icon name="chatbubbles-outline"></ion-icon>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="Earning">
                     <div>
-                        <div class="numbers">$56,700</div>
-                        <div class="cardName">Earning</div>
+                        <div class="numbers" id="totalEarning">$56,700</div>
+                        <div class="cardName">Profit</div>
                     </div>
                     <div class="iconBx">
                         <ion-icon name="cash-outline"></ion-icon>
@@ -188,9 +189,9 @@
             </div>
 
 
-            <div class="details">
+            <div class="details" >
                 <!-- order details list -->
-                <div class="recentOrders">
+                <div class="recentOrders" id="delBoyTable">
                     <div class="cardHeader">
                         <h2>Recent Orders</h2>
                         <a href="#" class="btn">View All</a>
@@ -199,91 +200,14 @@
                         <thead>
                             <tr>
                                 <td>Name</td>
-                                <td>Price</td>
-                                <td>Payment</td>
+                                <td>Salary</td>
                                 <td>Status</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status delivered">Delivered</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status pending">Pending</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status return">Return</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status pending">Pending</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status delivered">Delivered</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status return">Return</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status delivered">Delivered</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status delivered">Delivered</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status return">Return</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status delivered">Delivered</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status return">Return</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status delivered">Delivered</span></td>
-                            </tr>
-                            <tr>
-                                <td>Burger</td>
-                                <td>$25</td>
-                                <td>Paid</td>
-                                <td><span class="status pending">Pending</span></td>
-                            </tr>
+                            <!-- add delivery boys status -->
                         </tbody>
+
                     </table>
                 </div>
 
@@ -328,7 +252,7 @@
 
                     <hr>
 
-                    <div class="add"><button class="addBtn">Add New Product</button></div>
+                    <div class="add"><button class="addBtn"><a href="/adminNavPages/addProduct.html">Add New Product</a></button></div>
                 </div>
 
                 
@@ -371,4 +295,4 @@
 
 </html>
 
-<script src="./admin.js"></script>
+<script src="/script/admin.js"></script>
