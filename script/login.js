@@ -29,3 +29,9 @@ let url = "http://localhost:3000";
             alert("Wrong Credentials")
         }
     }
+
+
+    let strtbtn=document.getElementById("startorder");
+    strtbtn.addEventListener('click',()=>{
+        window.location.href="./menu.html"
+    })

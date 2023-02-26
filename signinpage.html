@@ -21,7 +21,7 @@
         <div id="mobile_nav">
 
             <a href="index.html"><img src="images/nav.jpeg" alt="bfc"></a>
-            <a href="cart.html"><i class="fas fa-shopping-bag fa-1x "></i></a>
+            <a href="cart.html"><i ></i></a>
         </div>
         <div class="nav-top">
             <img src="images/nav.jpeg" alt="lines" style="height: 80%; width: 4%;">
@@ -29,11 +29,11 @@
         <nav>
             <div class="box1_5">
                 <a href="index.html"><img class="img_align" src="images/bfccc.jpg" alt="chicken"></a>
-                <a href="menu.html">Menu</a>
+                
 
             </div>
             <div class="box2_5">
-                <button id="startorder" class="btn-class" onclick="homePage()">Start Order</button>
+                <button id="startorder" class="btn-class" >Start Order</button>
                 <a href="login.html"></a>
 
             </div>
@@ -154,4 +154,9 @@ document.querySelector("form").addEventListener("submit", (e) => {
             console.log(error);
         }
     }
+
+let strtbtn=document.getElementById("startorder");
+    strtbtn.addEventListener('click',()=>{
+        window.location.href="./menu.html"
+    })
 </script>
