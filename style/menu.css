@@ -43,7 +43,8 @@ body {
 }
 
 #main_container {
-    width: 90%;
+    /*Change here*/
+    width: 100%;
     display: flex;
     margin: auto;
     height: 100vh;
@@ -124,6 +125,7 @@ body {
     font-weight: bold;
 }
 .right-menu-section button {
+    /*Change here*/
     width: 60%;
     margin-left: 17%;
     color: white;
@@ -149,7 +151,7 @@ body {
  }
 
  #Chick_bucket>div {
-     width: 400px;
+     width: 100%;
      padding-bottom: 25px;
      margin-bottom: 25px;
      border-radius: 10px;
@@ -159,19 +161,22 @@ body {
 
  #Chick_bucket h3 {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  #Chick_bucket h4 {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  #Chick_bucket p {
      padding-left: 6%;
+     padding-right: 3%;
  }
 
 
  #Chick_bucket img {
-     width: 400px;
+     width: 100%;
      padding-left: 0%;
  }
 
@@ -193,19 +198,22 @@ body {
 
  #Biryani_bucket h3 {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  #Biryani_bucket h4 {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  #Biryani_bucket p {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
 
  #Biryani_bucket img {
-     width: 400px;
+     width: 100%;
      padding-left: 0%;
  }
 
@@ -217,7 +225,7 @@ body {
  }
 
  #Box_Meal>div {
-     width: 400px;
+     width: 100%;
      padding-bottom: 25px;
      margin-bottom: 25px;
      border-radius: 10px;
@@ -228,10 +236,12 @@ body {
  #Box_Meal h3,
  h4 {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  #Box_Meal p {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  .description {
@@ -241,7 +251,7 @@ body {
  }
 
  #Box_Meal img {
-     width: 400px;
+     width: 100%;
      padding-left: 0%;
  }
 
@@ -253,7 +263,7 @@ body {
  }
 
  #Burger>div {
-     width: 400px;
+     width: 100%;
      padding-bottom: 25px;
      margin-bottom: 25px;
      border-radius: 10px;
@@ -263,10 +273,12 @@ body {
 
  #Burger h3 {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  #Burger p {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  .description {
@@ -276,43 +288,10 @@ body {
  }
 
  #Burger img {
-     width: 400px;
+     width: 100%;
      padding-left: 0%;
  }
 
- #Stay {
-     display: grid;
-     grid-template-columns: repeat(3, 1fr);
-     grid-gap: 30px;
-     margin-right: 85px;
- }
-
- #Stay>div {
-     width: 400px;
-     padding-bottom: 25px;
-     margin-bottom: 25px;
-     border-radius: 10px;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- }
-
- #Stay h3 {
-     padding-left: 6%;
- }
-
- #Stay p {
-     padding-left: 6%;
- }
-
- .description {
-     height: 50px;
-     margin-bottom: 20px;
-     overflow: hidden;
- }
-
- #Stay img {
-     width: 400px;
-     padding-left: 0%;
- }
 
  #Snack {
      display: grid;
@@ -322,7 +301,7 @@ body {
  }
 
  #Snack>div {
-     width: 400px;
+     width: 100%;
      padding-bottom: 25px;
      margin-bottom: 25px;
      border-radius: 10px;
@@ -331,16 +310,18 @@ body {
 
  #Snack h3 {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  #Snack p {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
 
 
  #Snack img {
-     width: 400px;
+     width: 100%;
      padding-left: 0%;
  }
 
@@ -352,7 +333,7 @@ body {
  }
 
  #Beverage>div {
-     width: 400px;
+     width: 100%;
      padding-bottom: 25px;
      margin-bottom: 25px;
      border-radius: 10px;
@@ -361,14 +342,16 @@ body {
 
  #Beverage h3 {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  #Beverage p {
      padding-left: 6%;
+    padding-right: 3%;
  }
 
  #Beverage img {
-     width: 400px;
+     width: 100%;
      padding-left: 0%;
  }
 
