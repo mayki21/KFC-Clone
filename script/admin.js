@@ -45,8 +45,13 @@ function assigningDelBoy(orderArr) {
             for (i = 0; i < allStatus.length; i++) {
                 if (allStatus[i].textContent == "Not Assigned") {
                     allStatus[i].textContent = "Assigned";
+                    setTimeout(()=>{
+                        localStorage.clear("cart")
+                        window.location.reload();
+                    }, 600000)
                     break;
                 }
+                
             }
         }
     })
@@ -60,8 +65,8 @@ function calTotalSale() {
     for (let i = 0; i < orderArr.length; i++) {
         sum += orderArr[i].price;
     }
-    totalsales.innerHTML = `$ ${sum}`;
-    totalEarning.innerHTML = `$ ${sum - (sum * 10 / 100)}`;
+    totalsales.innerHTML = `₹ ${sum}`;
+    totalEarning.innerHTML = `₹ ${sum - (sum * 10 / 100)}`;
 }
 
 calTotalEarning();

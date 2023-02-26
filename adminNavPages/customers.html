@@ -85,18 +85,15 @@
 
     </nav>
 
-
     <br>
-
-    
 
     <div class="container mt-3">
         <div id="main">
             <h2>Customer Details</h2>
             <p>Previous ordered customer details from <span> 2022-2023 </span></p>
             <div class="search">
-                <input type="text" placeholder="Product name">
-                <button>Search</button>
+                <input type="text" id="nameSearchInp" placeholder="Product name">
+                <button id="searchButton">Search</button>
             </div>
             <table class="table table-dark table-striped" id="tablemaking">
                 <thead>
@@ -119,26 +116,25 @@
     </div>
     <div id="pages"></div>
 
-
-
-
-
 </body>
 
 <script>
 
     let cont = document.querySelector("tbody");
     let pageWrapper = document.querySelector("#pages");
+    let searchBtn = document.querySelector("#searchButton");
 
     let url = "http://localhost:3000";
 
     let globalArr = [];
+    let searchArr = [];
     let noOfItems = 0;
 
-    totalfetchedData()
 
+    totalfetchedData()
     function totalfetchedData(page = 1) {
         fetch(`${url}/customerDetails`).then((res) => res.json()).then((data) => {
+            searchArr = data;
             noOfItems = data.length;
         })
         fetchdata(page);
@@ -149,7 +145,6 @@
         try {
             let req = await fetch(`${url}/customerDetails?_limit=10&_page=${page}`);
             let res = await req.json();
-            console.log(res);
             globalArr = res;
             pagination(noOfItems);
             displayData(res)
@@ -178,7 +173,7 @@
         for (let i = 0; i < btn.length; i++) {
             btn[i].addEventListener("click", (e) => {
                 removeData(globalArr, globalArr[i].id);
-                console.log(globalArr[i].id)
+                // console.log(globalArr[i].id)
             })
         }
     }
@@ -194,19 +189,13 @@
         let pageNoarr = document.querySelectorAll(".pageNo");
         for (let i = 0; i < pageNoarr.length; i++) {
             pageNoarr[i].addEventListener("click", () => {
-                console.log(pageNoarr[i].innerHTML);             // this line has doubt
+                // console.log(pageNoarr[i].innerHTML);             // this line has doubt
                 totalfetchedData(pageNoarr[i].innerHTML);
             })
         }
     }
 
     async function removeData(arr, id) {
-        // fetch(`${url}/customerDetails/${id}`, {
-        //     method : "DELETE",
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     }
-        // }).then((res)=>console.log(res))
         try {
             let req = await fetch(`${url}/customerDetails/${id}`, {
                 method: "DELETE",
@@ -214,10 +203,26 @@
                     "Content-Type": "application/json"
                 }
             })
-            console.log(req);
         } catch (error) {
             console.log(error);
         }
+    }
+
+    searchBtn.addEventListener("click", searchCustomer)
+    function searchCustomer(){
+        let val = document.querySelector("#nameSearchInp").value;
+        console.log(searchArr);
+        if(val==""){
+            totalfetchedData()
+        }
+        let newarr = [];
+        searchArr.forEach((el)=>{
+            if(el.name.toUpperCase().includes(val.toUpperCase())){
+                console.log("true");
+                newarr.push(el);
+            }
+        })
+        displayData(newarr);
     }
 
 </script>

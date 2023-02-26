@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Bootstrap Example</title>
   <meta charset="utf-8">
@@ -10,54 +11,99 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <style>
-    .navbar{
-        margin: 0px 50px 0px 50px;
-    }
-    #logo img{
-        width: 80px;
-        margin: 20px 0px 0px 100px;
-    }
-    .search{
-        display: flex;
-        /* border: 1px solid black; */
-        width: 80%;
-        margin: auto;
-        margin-top: 30px;
-        justify-content: flex-end;
-    }
-    .search input{
-        margin-right: 10px ;
+    .navbar {
+      margin: 0px 50px 0px 50px;
     }
 
+    #logo img {
+      width: 80px;
+      margin: 20px 0px 0px 100px;
+    }
+
+    .search {
+      display: flex;
+      /* border: 1px solid black; */
+      width: 80%;
+      margin: auto;
+      margin-top: 30px;
+      justify-content: flex-end;
+    }
+
+    .search input {
+      margin-right: 10px;
+    }
   </style>
 </head>
+
 <body>
-    <div id="logo"><img src="/images/bfccc.jpg" alt=""></div>
+  <div id="logo"><img src="/images/bfccc.jpg" alt=""></div>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="/adminPage.html">Dashboard</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/adminNavPages/orders.html">Orders</a>
-    </li>
-  </ul>
-  <!-- Navbar text-->
-  
-</nav>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/adminPage.html">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/adminNavPages/orders.html">Orders</a>
+      </li>
+    </ul>
+    <!-- Navbar text-->
 
-<div class="search">
+  </nav>
+
+  <div class="search">
     <input type="text" placeholder="Product name">
     <button>Search</button>
-</div>
+  </div>
 
-<br>
+  <br>
 
-<div class="container">
-  
-</div>
+  <div class="container">
+    <div class="container mt-3">
+      <div id="main">
+        <h2>Order Details</h2>
+        <table class="table table-dark table-striped" id="tablemaking">
+          <thead>
+            <tr>
+              <th>Product Image</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <!-- add row -->
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
 </body>
+
+<script>
+  let tbody = document.querySelector("tbody");
+
+  let getOrderArr = JSON.parse(localStorage.getItem("cart"));
+
+  displayAllOrder();
+  function displayAllOrder(){
+    let str = "";
+    getOrderArr.forEach((el)=>{
+      str  += `<tr>
+              <td><img href="${el.image}"></td>
+              <td>${el.name}</td>
+              <td>${el.price}</td>
+              <td>${el.category}</td>
+              <td>Assigned</td>
+            </tr>`
+    })
+    tbody.innerHTML = str;
+  }
+</script>
+
 </html>
