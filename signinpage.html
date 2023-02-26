@@ -7,8 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGNUP</title>
 
+    <link rel="icon" type="image/x-icon" href="images\bfccc.jpg">
 
-    <link rel="stylesheet" href="signinpage.css">
+
+    <link rel="stylesheet" href="/style/signinpage.css">
+
 
 </head>
 
@@ -131,7 +134,23 @@
 
 
 
+
     document.querySelector("form").addEventListener("submit", myFunction)
+
+
+
+    async function myFunction() {
+        try {
+
+
+
+
+
+
+    document.querySelector("form").addEventListener("submit", (e)=>{
+        e.preventDefault();
+        myFunction();
+    })
 
 
 
@@ -143,10 +162,13 @@
                 lasttname: document.querySelector("#lastname").value,
                 email: document.querySelector("#email").value,
                 pass: document.querySelector("#password").value,
-                confirm: document.querySelector("#confirmpassword").value,
+
 
             }
 
+
+
+            }
 
             let register_request = await fetch(`http://localhost:3000/users`, {
                 method: 'POST',
@@ -157,6 +179,9 @@
 
             })
 
+
+            })
+            alert("Account Created")
         }
         catch (error) {
             console.log(error);

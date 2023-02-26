@@ -276,7 +276,48 @@
       "createdAt": 1670165980569
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "firstname": "rahul",
+      "lasttname": "raman",
+      "email": "rahul@gmail.com",
+      "pass": "1234",
+      "confirm": "1234",
+      "id": 1
+    },
+    {
+      "firstname": "mayank",
+      "lasttname": "kumar",
+      "email": "mayank@gmail.com",
+      "pass": "1234",
+      "confirm": "1234",
+      "id": 2
+    },
+    {
+      "firstname": "nishant",
+      "lasttname": "kumar",
+      "email": "nishant@gmail.com",
+      "pass": "1234",
+      "confirm": "1234",
+      "id": 3
+    },
+    {
+      "firstname": "devnandan",
+      "lasttname": "kumar",
+      "email": "devnandan@gmail.com",
+      "pass": "1234",
+      "confirm": "1234",
+      "id": 4
+    },
+    {
+      "firstname": "ankit",
+      "lasttname": "kumar",
+      "email": "ankit@gmail.com",
+      "pass": "1234",
+      "confirm": "1234",
+      "id": 5
+    }
+  ],
   "comments": [],
   "photos": [],
   "todos": [],
@@ -2638,7 +2679,6 @@
       "image": "https://orderserv-kfc-assets.yum.com/15895bb59f7b4bb588ee933f8cd5344a/images/items/xl/L-200112.jpg?ver=25.33",
       "id": "39"
     }
-   
   ],
   "areas": [
     {
@@ -3114,9 +3154,9 @@
     {
       "id": 1,
       "name": "Abram Langtry",
-      "image": "/images/avatar/avatar1.jpeg",
+      "image": "https://img.freepik.com/free-photo/half-profile-image-handsome-young-caucasian-man-with-good-skin-brown-eyes-black-stylish-hair-stubble-posing-isolated-against-blank-wall-looking-front-him-smiling_343059-4560.jpg",
       "department": 1,
-      "salary": "500"
+      "salary": "10000"
     },
     {
       "id": 2,
@@ -3130,13 +3170,13 @@
       "name": "Giorgio Antonioni",
       "image": "/images/avatar/avatar1.jpeg",
       "department": 3,
-      "salary": 95000
+      "salary": 15000
     },
     {
       "name": "Himanshu",
       "image": "/images/avatar/avatar2.jpeg",
       "department": 4,
-      "salary": 100000,
+      "salary": 11000,
       "createdAt": 1670325954162,
       "id": "tEYFrHNsdO"
     },
@@ -3144,7 +3184,7 @@
       "name": "Prashant",
       "image": "/images/avatar/avatar2.jpeg",
       "department": 3,
-      "salary": 5000000,
+      "salary": 9000,
       "createdAt": 1670325954162,
       "id": "yjkyh1htCb"
     },
@@ -3152,21 +3192,29 @@
       "name": "Rushikesh",
       "image": "/images/avatar/avatar1.jpeg",
       "department": 3,
-      "salary": 3000000,
+      "salary": 5000,
       "createdAt": 1672901861637,
       "id": "fh2BHnLqlU"
+    },
+    {
+      "id": "g5qs2OrO86",
+      "name": "Kumar Vishwas",
+      "department": "4",
+      "salary": "5555",
+      "createdAt": 1672919913274,
+      "image": "/images/avatar/avatar1.jpeg"
     },
     {
       "id": "4FjVtmfUYz",
       "name": "Anand Kumar",
       "image": "/images/avatar/avatar2.jpeg",
-      "salary": "1000000"
+      "salary": "5000"
     },
     {
       "name": "Ajay Singh",
       "image": "/images/avatar/avatar1.jpeg",
       "department": "2",
-      "salary": "80",
+      "salary": "8000",
       "createdAt": 1672913508984,
       "id": "y1i4lO11Wk"
     },
@@ -3174,7 +3222,15 @@
       "id": "g5qs2OrO86",
       "name": "Kumar Vishwas",
       "department": "4",
-      "salary": "55555",
+      "salary": "5555",
+      "createdAt": 1672919913274,
+      "image": "/images/avatar/avatar1.jpeg"
+    },
+    {
+      "id": "g5qs2OrO86",
+      "name": "Kumar Vishwas",
+      "department": "4",
+      "salary": "5555",
       "createdAt": 1672919913274,
       "image": "/images/avatar/avatar1.jpeg"
     }
@@ -3251,15 +3307,6 @@
       "userid": "Marcellus.Hand",
       "address": "2548",
       "id": "11"
-    },
-    {
-      "name": "Jackie Kessler DDS",
-      "email": "Fay60@gmail.com",
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/34.jpg",
-      "mobile": "(768) 230-0107",
-      "userid": "Gust.Legros32",
-      "address": "47668",
-      "id": "12"
     },
     {
       "name": "Colleen Streich",
@@ -3566,15 +3613,6 @@
       "userid": "Christian.Kutch45",
       "address": "2241",
       "id": "48"
-    },
-    {
-      "name": "Dora Monahan",
-      "email": "Waylon_Pouros67@yahoo.com",
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/654.jpg",
-      "mobile": "554.319.3400 x59980",
-      "userid": "Adam73",
-      "address": "0012",
-      "id": "49"
     },
     {
       "name": "Janie Murazik",

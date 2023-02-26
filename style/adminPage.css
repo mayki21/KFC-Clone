@@ -481,4 +481,13 @@ body {
     display: block;
     margin: auto;
     margin-bottom: 20px;
+
+}
+.add button a{
+    text-decoration: none;
+    color: white;
+}
+.add button:hover,
+.add button a:hover{
+    color: red;
 }

@@ -95,4 +95,49 @@
     </form>
 </body>
 
+<script>
+    let url = `http://localhost:3000`;
+
+    let form = document.querySelector("form");
+    let name = document.querySelector("#name");
+    let type = document.querySelector("#type");
+    let image = document.querySelector("#image");
+    let price = document.querySelector("#price");
+    let category = document.querySelector("#category");
+    let description = document.querySelector("#desc");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (name.value == "" || type.value == "" || price.value == "" || image.value == "" || category.value == "" || description.value == "") {
+            alert("Fill all Credentials");
+        } else {
+            let obj = {
+                name: name.value,
+                type: type.value,
+                price: price.value,
+                image: image.value,
+                category: category.value,
+                description: description.value,
+            }
+            addToServer(obj);
+        }
+
+    })
+    async function addToServer(obj) {
+        try {
+            let req = await fetch(`${url}/recipes`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: obj
+            })
+            console.log(req);
+        } catch (error) {
+            console.log(error);
+        }
+
+    }
+</script>
+
 </html>
