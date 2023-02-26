@@ -17,13 +17,8 @@
                 <img src="images\bfccc.jpg" alt="BFC" onclick="location.href='index.html';">
                 <h3 onclick="location.href='menu.html';" id="menuBtn">Menu</h3>
                 <h3></h3>
-                <!-- <h3 onclick="location.href='deals.html';" id="dealsBtn">Deals</h3> -->
             </div>
             <div id="rightNav">
-                <!-- <h3 onclick="location.href='login.html'" id="signInBtn">Sign In</h3>
-                <h3 style="color: gray; font-size: 30px;">|</h3>
-                <h3 id="totalAmount">₹0</h3>
-                <img src="images\cartBucket.jpg" alt="" onclick="location.href='cart.html';"> -->
             </div>
         </nav>
     </header>
@@ -33,7 +28,21 @@
     </div>
     <div id="container">
         <div id="ItemList"></div>
-        <div id="checkoutBox"></div>
+        <div id="checkoutBox">
+            <h1 id="itemCount"></h1>
+            <div id="subtotal">
+                <p>Subtotal</p>
+                <p id="totalAmount"></p>
+            </div>
+            <div id="GST">
+                <p>GST</p>
+                <p id="GSTAmt"></p>
+            </div>
+            <button onclick="location.href='checkout.html';">
+            <p>checkout</p>
+            <p id="totalAMT"></p>
+            </button>
+        </div>
     </div> 
 
     <footer>

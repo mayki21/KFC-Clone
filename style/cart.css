@@ -56,23 +56,46 @@ nav>#rightNav>h3:hover{
 /* cartbody */
 
 #container{
-    width: 80%;
+    width: 90%;
     margin: auto;
-    border: 1px solid red;
-    height: 100vh;
+    height: max-content;
     display: flex;
     justify-content: space-around;
 }
 
 #ItemList{
-    width: 65%;
+    width: 55%;
 }
 
 #checkoutBox{
-    width: 25%;
-    border: 1px solid green;
+    width: 30%;
+    height: fit-content;
+    padding: 2%;
+    margin-top: 10%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-
+#subtotal{
+    display: flex;
+    justify-content: space-between;
+    margin: 10% 0%;
+}
+#GST{
+    display: flex;
+    justify-content: space-between; 
+    margin: 10% 0%;
+}
+#checkoutBox>button{
+    width: 100%;
+    padding: 5%;
+    margin:auto;
+    display: flex;
+    background-color: #e4002b;
+    color: #DBDBDB;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    justify-content: space-around;
+}
 .cartcard{
     background-color: #f8f7f5;
     padding: 2%;
@@ -101,6 +124,12 @@ nav>#rightNav>h3:hover{
     font-size: 20px;
 }
 
+.quantityBtn:hover{
+    background-color: #dbdbdb ;
+    color: #e4002b;
+    font-weight: bolder;
+}
+
 .quantityBlock{
     width: 30px;
     height: 30px;
@@ -111,6 +140,21 @@ nav>#rightNav>h3:hover{
 
 .quantitySec{
     display: flex;
+    margin: 2% 7%;
+}
+
+.removebtn{
+    width: 20%;
+    margin-left: 60%;
+    background-color: #e4002b;
+    color: #DBDBDB;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+.removebtn:hover{
+    background-color: #dbdbdb ;
+    color: #e4002b;
 }
 /* footerPart */
 
