@@ -54,6 +54,7 @@ body {
     flex: 1;
     width: 100px;
     top: 100px;
+    margin-left: 30px;
 }
 
 .strips {
