@@ -128,48 +128,18 @@
 
 </html>
 <script>
-
-
-
-
-
-
-
-    document.querySelector("form").addEventListener("submit", myFunction)
-
-
-
-    async function myFunction() {
-        try {
-
-
-
-
-
-
-    document.querySelector("form").addEventListener("submit", (e)=>{
+    document.querySelector("form").addEventListener("submit", (e) => {
         e.preventDefault();
         myFunction();
     })
-
-
-
     async function myFunction() {
         try {
-
             let obj = {
                 firstname: document.querySelector("#firstname").value,
                 lasttname: document.querySelector("#lastname").value,
                 email: document.querySelector("#email").value,
                 pass: document.querySelector("#password").value,
-
-
             }
-
-
-
-            }
-
             let register_request = await fetch(`http://localhost:3000/users`, {
                 method: 'POST',
                 headers: {
@@ -178,24 +148,10 @@
                 body: JSON.stringify(obj)
 
             })
-
-
-            })
             alert("Account Created")
         }
         catch (error) {
             console.log(error);
         }
-
-
     }
-
-
-
-
-
-
-
-
-
 </script>
