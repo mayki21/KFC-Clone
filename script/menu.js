@@ -3,7 +3,6 @@ let chickenBucketContainer = document.getElementById("Chick_bucket");
 let biryaniBucketContainer = document.getElementById("Biryani_bucket");
 let boxMealsContainer = document.getElementById("Box_Meal");
 let burgersContainer = document.getElementById("Burger");
-let stayHomeSpecialsContainer = document.getElementById("Stay_home");
 let snacksContainer = document.getElementById("Snack");
 let beveragesContainer = document.getElementById("Beverage");
 
@@ -32,7 +31,6 @@ function DisplayProduct(data) {
     biryaniBucketContainer.innerHTML = "";
     boxMealsContainer.innerHTML = "";
     burgersContainer.innerHTML = "";
-    stayHomeSpecialsContainer.innerHTML = "";
     snacksContainer.innerHTML = "";
     beveragesContainer.innerHTML = "";
 
@@ -112,7 +110,6 @@ let MainBir = document.getElementById("biryani_bucket")
 let MainBox = document.getElementById("box_meals")
 let MainBurger = document.getElementById("burgers")
 let MainSna = document.getElementById("snacks")
-let MainStay = document.getElementById("stay_home_specials")
 let MainBev = document.getElementById("beverages")
 
 
@@ -126,7 +123,6 @@ search.addEventListener("keypress", (e) => {
         MainBox.innerHTML = "";
         MainBurger.innerHTML = "";
         MainSna.innerHTML = "";
-        MainStay.innerHTML = "";
         MainBev.innerHTML = "";
 
 
@@ -139,7 +135,6 @@ search.addEventListener("keypress", (e) => {
         biryaniBucketContainer.innerHTML = "";
         boxMealsContainer.innerHTML = "";
         burgersContainer.innerHTML = "";
-        stayHomeSpecialsContainer.innerHTML = "";
         snacksContainer.innerHTML = "";
         beveragesContainer.innerHTML = "";
 
