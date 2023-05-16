@@ -1,4 +1,4 @@
-let url = "http://localhost:3000";
+let url = "https://fuzzy-garb-tuna.cyclic.app";
     document.querySelector("form").addEventListener("submit", (e)=>{
         e.preventDefault();
         myFunction();

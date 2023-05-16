@@ -1,4 +1,4 @@
-let url = `http://localhost:3000`;
+let url = `https://fuzzy-garb-tuna.cyclic.app`;
 
 let countdelBoys = document.querySelector("#Avail_del_boy");
 let btn = document.querySelector(".addBtn");

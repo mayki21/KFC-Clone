@@ -2708,6 +2708,15 @@
       "category": "desserts",
       "description": "Pepsi Black Can 330 ml",
       "id": "2ycYYHr"
+    },
+    {
+      "name": "pizza",
+      "type": "beverages",
+      "price": "254",
+      "image": "ygmkj",
+      "category": "beverage",
+      "description": "nice piza",
+      "id": "MzLUG2U"
     }
   ],
   "areas": [
@@ -3339,15 +3348,6 @@
       "id": "11"
     },
     {
-      "name": "Colleen Streich",
-      "email": "Laverne.Marks88@yahoo.com",
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/823.jpg",
-      "mobile": "(697) 623-6471 x77605",
-      "userid": "Casimir_Conroy",
-      "address": "930",
-      "id": "13"
-    },
-    {
       "name": "Mrs. Marcus Bayer",
       "email": "Lolita51@hotmail.com",
       "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/589.jpg",
@@ -3607,15 +3607,6 @@
       "userid": "Bennett59",
       "address": "679",
       "id": "44"
-    },
-    {
-      "name": "Belinda Schaden",
-      "email": "Stone14@gmail.com",
-      "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1032.jpg",
-      "mobile": "911.506.1596",
-      "userid": "Raheem11",
-      "address": "61472",
-      "id": "45"
     },
     {
       "name": "Miss Karen Powlowski",
