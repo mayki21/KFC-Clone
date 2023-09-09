@@ -1,4 +1,4 @@
-let url = `https://fuzzy-garb-tuna.cyclic.app`;
+let url = `https://awful-tuxedo-cow.cyclic.cloud`;
 
 let countdelBoys = document.querySelector("#Avail_del_boy");
 let btn = document.querySelector(".addBtn");

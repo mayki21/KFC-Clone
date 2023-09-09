@@ -1,4 +1,4 @@
-let url = "https://fuzzy-garb-tuna.cyclic.app";
+let url = "https://awful-tuxedo-cow.cyclic.cloud";
     document.querySelector("form").addEventListener("submit", (e)=>{
         e.preventDefault();
         myFunction();
