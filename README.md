@@ -19,7 +19,6 @@ step3 - run these command on gitbash to Start JSON Server
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -84,10 +83,6 @@ To run the KFC Clone project locally, follow these steps:
 
 4. Open your web browser and navigate to `http://localhost:3000` to access the application.
 ---
-
-## Screenshots
-
-[Insert screenshots of the application here to give users a visual preview of the interface and features.]
 
 ---
 
